@@ -11,12 +11,12 @@ public class ObjInteract : MonoBehaviour , IInteractable
         return objectType;
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
         // เช็คว่าสิ่งจับชนมีสคริปต์ PlayerInteractor ไหม
         if (other.CompareTag("Player"))
         {
-            Debug.Log("In Trigger");
+            //Debug.Log("In Trigger");
             PlayerInteractor player = other.GetComponent<PlayerInteractor>();
             if (player != null)
             {
@@ -34,7 +34,7 @@ public class ObjInteract : MonoBehaviour , IInteractable
         
     }
 
-    private void OnTriggerExit(Collider other)
+    protected void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -52,11 +52,10 @@ public class ObjInteract : MonoBehaviour , IInteractable
     }
 
 
-    public void Interact(Type playerType)
+    public virtual void Interact(Type playerType)
     {
         Debug.Log($"[Success] Player ({playerType}) interacted with {gameObject.name} (Type: {objectType})!");
 
-        Destroy(gameObject);
 
         // TODO: ใส่ Logic Object เช่น เปิดประตู, เก็บไอเทม, เปิดกลไก ฯลฯของ 
     }
