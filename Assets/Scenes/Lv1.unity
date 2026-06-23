@@ -460,6 +460,7 @@ GameObject:
   - component: {fileID: 561363864}
   - component: {fileID: 561363867}
   - component: {fileID: 561363868}
+  - component: {fileID: 561363869}
   m_Layer: 6
   m_Name: P1
   m_TagString: Player
@@ -561,6 +562,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 5
   cameraTransform: {fileID: 1306279811}
+--- !u!114 &561363869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561363863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb73fea4c12347d40be6c9f5f18e5a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
 --- !u!1 &724604146
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,6 +803,7 @@ GameObject:
   - component: {fileID: 917033131}
   - component: {fileID: 917033134}
   - component: {fileID: 917033135}
+  - component: {fileID: 917033136}
   m_Layer: 7
   m_Name: P2
   m_TagString: Player
@@ -891,6 +905,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player2Movement
   speed: 5
   cameraTransform: {fileID: 1306279811}
+--- !u!114 &917033136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917033130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb73fea4c12347d40be6c9f5f18e5a55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
 --- !u!1 &1106873643
 GameObject:
   m_ObjectHideFlags: 0
