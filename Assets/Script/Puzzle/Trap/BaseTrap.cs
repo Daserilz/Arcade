@@ -10,13 +10,15 @@ public class BaseTrap : MonoBehaviour
         {
             Debug.Log("InTriggerStay");
             PlayerInteractor player = other.GetComponent<PlayerInteractor>();
+            PlayerRespawn respawnSystem = other.GetComponent<PlayerRespawn>();
             if (player != null)
             {
                 if (trapType == Type.None || player.GetPlayerType() != trapType)
                 {
                     //take damage or reset pos player
                     Debug.Log("Destroy");
-                    player.gameObject.SetActive(false);
+                    respawnSystem.Respawn();
+                    //player.gameObject.SetActive(false);
                 }
             }
             
