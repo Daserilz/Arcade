@@ -42,8 +42,11 @@ syslog*
 # Visual Studio Code values
 .vscode/
 
+
 # Crashlytics generated file
 crashlytics-build.properties
 
 # Packed Modding Area
 /[A|a]sset[B|b]undles/
+
+.vs/
