@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "D:\\Daser\\Github\\Arcade\\Arcade\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\player\\playerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\puzzle\\trap\\basetrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\puzzle\\trap\\basetrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\player\\playerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\player\\player2movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player2movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\player\\playerinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\player\\playerinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playerinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -54,8 +54,7 @@
               "RelativeToolTip": "Assets\\Script\\Player\\PlayerMovement.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-23T08:38:50.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-23T08:38:50.587Z"
             },
             {
               "$type": "Document",
@@ -67,12 +66,11 @@
               "RelativeToolTip": "Assets\\Script\\Player\\Player2Movement.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-23T05:21:39.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-23T05:21:39.489Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerRespawn.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerRespawn.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerRespawn.cs",
@@ -85,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BaseTrap.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Trap\\BaseTrap.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\Trap\\BaseTrap.cs",
@@ -106,8 +104,7 @@
               "RelativeToolTip": "Assets\\Script\\Player\\PlayerInteractor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T07:39:08.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T07:39:08.157Z"
             },
             {
               "$type": "Document",
