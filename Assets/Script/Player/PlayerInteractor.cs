@@ -21,6 +21,7 @@ public class PlayerInteractor : MonoBehaviour
             Debug.Log("Click E");
             if (currentTarget != null)
             {
+                if (currentTarget.isOneUse && currentTarget.hasInteracted) return;
                 currentTarget.Interact(myPlayerType);
             }
         }
