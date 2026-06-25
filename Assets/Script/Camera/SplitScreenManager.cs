@@ -9,17 +9,11 @@ public class SplitScreenCameraManager : MonoBehaviour
 
     public float smoothSpeed = 5f;
     public Vector3 offset = new Vector3(0f, 5f, -10f);
+    public float splitDistance = 15f; // distance threshold
 
     void Start()
     {
-        // Ensure both cameras exist and set split-screen rects
-        camera1.rect = new Rect(0f, 0f, 0.5f, 1f);
-        camera2.rect = new Rect(0.5f, 0f, 0.5f, 1f);
-
-        camera1.enabled = true;
-        camera2.enabled = true;
-
-        // Audio listener setup: only one active
+        // Make sure only one AudioListener is active at start
         if (camera1.GetComponent<AudioListener>() == null)
             camera1.gameObject.AddComponent<AudioListener>();
         if (camera2.GetComponent<AudioListener>() != null)
@@ -30,9 +24,36 @@ public class SplitScreenCameraManager : MonoBehaviour
     {
         if (player1 == null || player2 == null) return;
 
-        // Always follow each player
-        FollowPlayer(camera1, player1);
-        FollowPlayer(camera2, player2);
+        float distance = Vector3.Distance(player1.position, player2.position);
+
+        if (distance > splitDistance)
+        {
+            // Enable split-screen
+            camera1.rect = new Rect(0f, 0f, 0.5f, 1f);
+            camera2.rect = new Rect(0.5f, 0f, 0.5f, 1f);
+            camera2.enabled = true;
+
+            // Follow each player
+            FollowPlayer(camera1, player1);
+            FollowPlayer(camera2, player2);
+
+            // Audio listener toggle
+            camera1.GetComponent<AudioListener>().enabled = false;
+            camera2.GetComponent<AudioListener>().enabled = true;
+        }
+        else
+        {
+            // Merge into single view (Player1 camera only)
+            camera1.rect = new Rect(0f, 0f, 1f, 1f);
+            camera2.enabled = false;
+
+            // Follow Player1 only
+            FollowPlayer(camera1, player1);
+
+            // Audio listener toggle
+            camera1.GetComponent<AudioListener>().enabled = true;
+            camera2.GetComponent<AudioListener>().enabled = false;
+        }
     }
 
     void FollowPlayer(Camera cam, Transform player)
