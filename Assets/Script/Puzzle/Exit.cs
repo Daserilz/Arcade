@@ -34,6 +34,7 @@ public class Exit : MonoBehaviour
         {
             Debug.Log("All players have reached the exit! Level complete!");
             // Implement level completion logic here
+            GameManager.Instance.NextLevel();
 
         }
     }

@@ -26,7 +26,8 @@ public class ObjInteract : MonoBehaviour , IInteractable
                 // CORE LOGIC: เช็คเงื่อนไข Type ตรงกัน หรือออบเจกต์เป็น None
                 if (objectType == Type.None || objectType == player.GetPlayerType())
                 {
-                    // UI
+                    // UI open
+
                     //  Interact แล้วนะ"
                     player.RegisterInteractable(this);
                 }
@@ -44,7 +45,7 @@ public class ObjInteract : MonoBehaviour , IInteractable
 
             if (player != null )
             {
-                // UI 
+                // UI close
 
                 // บPlayer ให้ลบออบเจกต์นี้ออกจากเป้าหมาย ป้องกันบั๊กกด Interact นอกระยะ
                 player.UnregisterInteractable(this);
