@@ -44,6 +44,7 @@ public class PlayerInteractor : MonoBehaviour
         }
     }
 
+
    
     public void RegisterInteractable(ObjInteract target)
     {
