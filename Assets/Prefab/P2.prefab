@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4286501856541915924}
   - component: {fileID: 183030678923652534}
   m_Layer: 7
-  m_Name: Capsule
+  m_Name: CapsuleC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,7 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
   myPlayerType: 2
-  currentTarget: {fileID: 0}
+  originalModel: {fileID: 0}
+  mechanismPrefab: {fileID: 0}
+  creativePrefab: {fileID: 0}
 --- !u!114 &7715425952096918798
 MonoBehaviour:
   m_ObjectHideFlags: 0

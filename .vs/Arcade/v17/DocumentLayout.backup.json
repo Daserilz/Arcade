@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "D:\\Daser\\Github\\Arcade\\Arcade\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\player\\player2movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\player\\player2movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\player2movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,11 +15,7 @@
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playerinteractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\puzzle\\moveobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\puzzle\\moveobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\puzzle\\moveobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -66,8 +66,7 @@
               "RelativeToolTip": "Assets\\Script\\Puzzle\\MoveObj.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T05:56:25.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-29T05:56:25.331Z"
             },
             {
               "$type": "Document",
@@ -79,8 +78,7 @@
               "RelativeToolTip": "Assets\\Script\\Puzzle\\Trap\\Laser.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwAIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T04:59:57.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-29T04:59:57.458Z"
             },
             {
               "$type": "Document",
@@ -92,31 +90,30 @@
               "RelativeToolTip": "Assets\\Script\\Puzzle\\Button\\CloseOpenButton.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-24T09:49:41.158Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-24T09:49:41.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerMovement.cs",
               "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Script\\Player\\PlayerMovement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-23T08:38:50.587Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Player2Movement.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\Player2Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player2Movement.cs",
               "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\Player2Movement.cs",
               "RelativeToolTip": "Assets\\Script\\Player\\Player2Movement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-23T05:21:39.489Z",
               "EditorCaption": ""
@@ -147,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayerInteractor.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerInteractor.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerInteractor.cs",
@@ -155,8 +152,7 @@
               "RelativeToolTip": "Assets\\Script\\Player\\PlayerInteractor.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T07:39:08.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T07:39:08.157Z"
             },
             {
               "$type": "Document",
@@ -168,8 +164,7 @@
               "RelativeToolTip": "Assets\\Script\\ObjInteract.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-19T07:32:28.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-19T07:32:28.134Z"
             },
             {
               "$type": "Document",
