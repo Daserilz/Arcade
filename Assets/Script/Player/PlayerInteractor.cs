@@ -63,7 +63,7 @@ public class PlayerInteractor : MonoBehaviour
     // ========================================================
     // ---------------- Swap Character -------------------
     // ========================================================
-    public void SwitchForm()
+    public void SwitchForm(float duration)
     {
         Type targetType = Type.None;
 
@@ -88,10 +88,10 @@ public class PlayerInteractor : MonoBehaviour
             StopCoroutine(transformCoroutine);
         }
 
-        transformCoroutine = StartCoroutine(TransformationRoutine(targetType));
+        transformCoroutine = StartCoroutine(TransformationRoutine(targetType , duration));
     }
 
-    private IEnumerator TransformationRoutine(Type targetType)
+    private IEnumerator TransformationRoutine(Type targetType , float duration)
     {
         // 1. เคลียร์ร่างเก่าทิ้งก่อน (ถ้ามีค้างอยู่)
         if (tempCharacterInstance != null)
@@ -124,7 +124,7 @@ public class PlayerInteractor : MonoBehaviour
         Debug.Log($"<color=yellow>แปลงร่างสลับไปเป็น Type: {myPlayerType} ชั่วคราว!</color>");
 
         // 5. จับเวลาหน่วง 30 วินาที
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(duration);
 
         // 6. เมื่อครบเวลา เรียกฟังก์ชันคืนร่างเดิมตามที่บันทึกไว้ใน Start()
         RevertToNormal();
@@ -145,7 +145,7 @@ public class PlayerInteractor : MonoBehaviour
         myPlayerType = originalPlayerType;
 
         transformCoroutine = null; // เคลียร์สถานะตัวจับเวลา
-        Debug.Log($"<color=orange>ครบ 30 วินาทีแล้ว คืนร่างเดิมสำเร็จ! Type: {myPlayerType}</color>");
+        Debug.Log($"<color=orange>ครบเวลา คืนร่างเดิมสำเร็จ! Type: {myPlayerType}</color>");
     }
 
 }

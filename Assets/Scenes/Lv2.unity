@@ -2378,7 +2378,6 @@ MonoBehaviour:
   camera2: {fileID: 1290042445}
   smoothSpeed: 5
   offset: {x: 0, y: 20, z: -15}
-  splitDistance: 10
 --- !u!1 &778644391
 GameObject:
   m_ObjectHideFlags: 0
@@ -6015,6 +6014,7 @@ GameObject:
   - component: {fileID: 2087708838}
   - component: {fileID: 2087708837}
   - component: {fileID: 2087708836}
+  - component: {fileID: 2087708839}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6063,6 +6063,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2087708839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087708835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9182c113cb881bf4c8ccb329818f645a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EventManager
+  eventDuration: 10
+  cooldownDuration: 5
+  formSwitcher: {fileID: 2087708837}
 --- !u!1 &2145234966
 GameObject:
   m_ObjectHideFlags: 0

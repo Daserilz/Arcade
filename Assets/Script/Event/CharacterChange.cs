@@ -20,11 +20,11 @@ public class CharacterChange : MonoBehaviour
             if (targetKeyField != null && targetKeyField.wasPressedThisFrame)
             {
 
-                SwitchAllPlayersForm();
+                SwitchAllPlayersForm(10f);
             }
         }
     }
-    public void SwitchAllPlayersForm()
+    public void SwitchAllPlayersForm(float duration)
     {
         // 1. ค้นหาคอมโพเนนต์ PlayerInteractor ทั้งหมดที่เปิดใช้งานอยู่ในฉากปัจจุบัน
         PlayerInteractor[] allPlayers = Object.FindObjectsByType<PlayerInteractor>(FindObjectsSortMode.None);
@@ -41,7 +41,7 @@ public class CharacterChange : MonoBehaviour
         {
             if (player != null)
             {
-                player.SwitchForm();
+                player.SwitchForm(duration);
             }
         }
 
