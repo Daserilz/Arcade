@@ -10,7 +10,7 @@ public class LaserMovement : MonoBehaviour
     private float spawnTime;
 
     // Update is called once per frame
-    private void Start()
+    private void OnEnable()
     {
         // บันทึกตำแหน่งและเวลาเริ่มต้นทันทีที่เลเซอร์ถูกสร้าง (เมื่อเริ่ม Event)
         startPosition = transform.position;

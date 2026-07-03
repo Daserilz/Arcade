@@ -3,24 +3,35 @@ using UnityEngine;
 
 public class LaserEventController : MonoBehaviour
 {
-    [SerializeField] private GameObject laserPrefab;
-    [SerializeField] private Transform[] spawnPoints;
+    [SerializeField] private GameObject[] sceneLasers;
 
 
-    private List<GameObject> activeLasers = new List<GameObject>();
+
+    private void Start()
+    {
+        // ป้องกันบั๊ก: บังคับปิดเลเซอร์ทั้งหมดทันทีตอนเริ่มเกม
+        foreach (GameObject laser in sceneLasers)
+        {
+            if (laser != null)
+            {
+                laser.SetActive(false);
+            }
+        }
+    }
     public void StartLaserEvent()
     {
-        if (laserPrefab == null || spawnPoints.Length == 0)
+        if (sceneLasers.Length == 0)
         {
-            Debug.LogWarning("ยังไม่ได้ตั้งค่า Laser Prefab หรือ Spawn Points!");
+            Debug.LogWarning("not have laser in Scene Lasers!");
             return;
         }
 
-        // วนลูปสร้างเลเซอร์ตามจำนวนจุดเกิดที่มี
-        foreach (Transform point in spawnPoints)
+        foreach (GameObject laser in sceneLasers)
         {
-            GameObject laser = Instantiate(laserPrefab, point.position, point.rotation);
-            activeLasers.Add(laser); // เก็บเข้า List
+            if (laser != null)
+            {
+                laser.SetActive(true); // เปิดการแสดงผลและการทำงาน
+            }
         }
     }
 
@@ -29,15 +40,12 @@ public class LaserEventController : MonoBehaviour
     /// </summary>
     public void StopLaserEvent()
     {
-        foreach (GameObject laser in activeLasers)
+        foreach (GameObject laser in sceneLasers)
         {
             if (laser != null)
             {
-                Destroy(laser);
+                laser.SetActive(false); // ซ่อนและหยุดการทำงาน
             }
         }
-
-        // เคลียร์ข้อมูลใน List หลังจากลบของจริงทิ้งหมดแล้ว
-        activeLasers.Clear();
     }
 }
