@@ -6157,6 +6157,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 997685502104060933, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: creativePrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 997685502104060933, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: objectGoneManager
+      value: 
+      objectReference: {fileID: 246581038}
     - target: {fileID: 3969457933210661781, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: m_Name
       value: P2
