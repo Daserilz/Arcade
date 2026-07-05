@@ -11,7 +11,7 @@ public class ObjectGone : MonoBehaviour
     public float minDelay = 1f;
     public float maxDelay = 5f;
     public float respawnDelay = 2f;
-    public float respawnRange = 3f; // distance Player2 must be within
+    public float respawnRange = 3f;
 
     private GameObject currentHiddenObject = null;
     private Coroutine sequenceCoroutine;
@@ -50,6 +50,7 @@ public class ObjectGone : MonoBehaviour
         }
     }
 
+    // 🔹 Player2 respawns hidden object
     public void TryRespawnHiddenObject()
     {
         if (currentHiddenObject != null && player2 != null)
@@ -73,5 +74,41 @@ public class ObjectGone : MonoBehaviour
         if (obj != null) obj.SetActive(true);
 
         currentHiddenObject = null;
+    }
+
+    // 🔹 Player1 hides nearest object (similar to Player2 respawn)
+    public void TryHideNearestObject(Vector3 playerPos)
+    {
+        if (currentHiddenObject != null) return;
+
+        GameObject nearest = null;
+        float nearestDist = Mathf.Infinity;
+
+        foreach (GameObject obj in targetObjects)
+        {
+            if (obj == null || !obj.activeSelf) continue;
+
+            float dist = Vector3.Distance(playerPos, obj.transform.position);
+            if (dist < nearestDist)
+            {
+                nearest = obj;
+                nearestDist = dist;
+            }
+        }
+
+        if (nearest != null)
+        {
+            if (bugManager != null && bugManager.IsObjectBusy(nearest))
+            {
+                bugManager.ClearBugs(nearest);
+                Debug.Log("<color=red>Player1 cleared bugs!</color>");
+            }
+            else
+            {
+                nearest.SetActive(false);
+                currentHiddenObject = nearest;
+                Debug.Log("<color=red>Player1 hid object!</color>");
+            }
+        }
     }
 }

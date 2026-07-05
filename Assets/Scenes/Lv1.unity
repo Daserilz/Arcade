@@ -1863,7 +1863,7 @@ GameObject:
   - component: {fileID: 246581036}
   - component: {fileID: 246581038}
   m_Layer: 0
-  m_Name: Gamemanagers
+  m_Name: Objectmanagers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1952,8 +1952,8 @@ MonoBehaviour:
   - {fileID: 165723997}
   minDelay: 1
   maxDelay: 5
-  respawnDelay: 2
-  respawnRange: 3
+  respawnDelay: 5
+  respawnRange: 10
   bugManager: {fileID: 246581036}
   player2: {fileID: 917033133}
 --- !u!1001 &315575900
@@ -7371,7 +7371,7 @@ GameObject:
   - component: {fileID: 997489235}
   m_Layer: 0
   m_Name: Bug
-  m_TagString: Untagged
+  m_TagString: Bug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11675,6 +11675,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 604686349846805585, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: objectGoneManager
+      value: 
+      objectReference: {fileID: 246581038}
     - target: {fileID: 2324941175909369003, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: cameraTransform
       value: 
