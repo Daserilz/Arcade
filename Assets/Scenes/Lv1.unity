@@ -1885,8 +1885,6 @@ MonoBehaviour:
   bugCount: 3
   minSpawnDelay: 1
   maxSpawnDelay: 3
-  minBugLifetime: 2
-  maxBugLifetime: 3
   spawnRadius: 2
   targetObjects:
   - {fileID: 575184208}
@@ -2013,6 +2011,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59233625f4471da4f9df10ee29ab9f43, type: 3}
+--- !u!1 &330275741 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6879304372851157208, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+  m_PrefabInstance: {fileID: 1547790730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &367863097
 Mesh:
   m_ObjectHideFlags: 0
@@ -3259,6 +3262,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3523631349825629576, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
   m_PrefabInstance: {fileID: 1547790730}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &561363867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330275741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67ab562cd1903448a07a93d2762fa53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player1BugFixer
+  bugManager: {fileID: 246581036}
+  interactRange: 3
 --- !u!1 &575184208
 GameObject:
   m_ObjectHideFlags: 0
@@ -11730,7 +11747,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6879304372851157208, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 561363867}
   m_SourcePrefab: {fileID: 100100000, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
 --- !u!43 &1581159792
 Mesh:

@@ -9,26 +9,33 @@ public class ObjectBug : MonoBehaviour
     public int bugCount = 3;
     public float minSpawnDelay = 1f;
     public float maxSpawnDelay = 5f;
-    public float minBugLifetime = 2f;
-    public float maxBugLifetime = 3f;
     public float spawnRadius = 2f;
 
     [Header("Target Objects")]
     public List<GameObject> targetObjects;
 
     private HashSet<GameObject> busyObjects = new HashSet<GameObject>();
+    private GameObject currentBuggedObject = null;
+    private List<GameObject> spawnedBugs = new List<GameObject>();
 
     void Start()
     {
-        StartCoroutine(ActivateObjectsSequentially());
+        StartCoroutine(SpawnSequentially());
     }
 
-    IEnumerator ActivateObjectsSequentially()
+    IEnumerator SpawnSequentially()
     {
         while (true)
         {
-            GameObject obj = targetObjects[Random.Range(0, targetObjects.Count)];
+            // Wait until Player1 fixes current bugs
+            if (currentBuggedObject != null)
+            {
+                yield return null;
+                continue;
+            }
 
+            // Pick next object
+            GameObject obj = targetObjects[Random.Range(0, targetObjects.Count)];
             if (!obj.activeSelf || busyObjects.Contains(obj))
             {
                 yield return null;
@@ -39,26 +46,20 @@ public class ObjectBug : MonoBehaviour
             yield return new WaitForSeconds(delay);
 
             busyObjects.Add(obj);
+            currentBuggedObject = obj;
 
-            List<GameObject> spawnedBugs = new List<GameObject>();
+            // Spawn bugs permanently until cleared
+            spawnedBugs.Clear();
             for (int i = 0; i < bugCount; i++)
             {
                 Vector3 randomPos = obj.transform.position + Random.insideUnitSphere * spawnRadius;
                 randomPos.y = obj.transform.position.y;
                 GameObject bug = Instantiate(bugPrefab, randomPos, Quaternion.identity);
-                bug.tag = "Bug"; // ensure prefab has Bug tag
+                bug.tag = "Bug";
                 spawnedBugs.Add(bug);
             }
 
-            float lifetime = Random.Range(minBugLifetime, maxBugLifetime);
-            yield return new WaitForSeconds(lifetime);
-
-            foreach (GameObject bug in spawnedBugs)
-            {
-                if (bug != null) Destroy(bug);
-            }
-
-            busyObjects.Remove(obj);
+            Debug.Log("<color=yellow>Bugs spawned on object!</color>");
         }
     }
 
@@ -67,18 +68,18 @@ public class ObjectBug : MonoBehaviour
         return busyObjects.Contains(obj);
     }
 
-    // 👇 Player1 calls this
+    // Player1 fixes bugs
     public void ClearBugs(GameObject obj)
     {
-        foreach (GameObject bug in GameObject.FindGameObjectsWithTag("Bug"))
+        foreach (GameObject bug in spawnedBugs)
         {
-            if (bug != null && Vector3.Distance(obj.transform.position, bug.transform.position) < spawnRadius * 2f)
-            {
-                Destroy(bug);
-            }
+            if (bug != null) Destroy(bug);
         }
 
+        spawnedBugs.Clear();
         busyObjects.Remove(obj);
-        Debug.Log("<color=red>Bugs cleared on object!</color>");
+        if (currentBuggedObject == obj) currentBuggedObject = null;
+
+        Debug.Log("<color=green>Player1 fixed object, bugs cleared!</color>");
     }
 }
