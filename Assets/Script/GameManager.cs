@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public void NextLevel()
     {
         Time.timeScale = 1f;
