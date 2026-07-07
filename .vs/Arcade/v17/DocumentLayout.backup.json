@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\Daser\\Github\\Arcade\\Arcade\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -84,7 +84,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\UiManager.cs",
               "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\UiManager.cs",
               "RelativeToolTip": "Assets\\Script\\UiManager.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAkAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBIAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-06T08:43:02.426Z",
               "EditorCaption": ""
@@ -99,8 +99,7 @@
               "RelativeToolTip": "Assets\\Script\\LevelManager.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwCAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T06:24:29.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-06T06:24:29.55Z"
             },
             {
               "$type": "Document",

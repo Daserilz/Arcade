@@ -57,6 +57,9 @@ public class ObjInteract : MonoBehaviour , IInteractable
     public virtual void Interact(Type playerType)
     {
         Debug.Log($"[Success] Player ({playerType}) interacted with {gameObject.name} (Type: {objectType})!");
+        if (playerType == Type.Mechanism) GameManager.Instance.addScoreMechanism();
+        else if (playerType == Type.Creative) GameManager.Instance.addScoreCreative();
+
         if (isOneUse)
         {
             hasInteracted = true;

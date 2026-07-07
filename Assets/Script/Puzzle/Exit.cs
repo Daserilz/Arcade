@@ -27,6 +27,10 @@ public class Exit : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        currentPlayers = 0;
+    }
 
     private void CheckExitStatus()
     {
@@ -34,7 +38,8 @@ public class Exit : MonoBehaviour
         {
             Debug.Log("All players have reached the exit! Level complete!");
             // Implement level completion logic here
-            GameManager.Instance.NextLevel();
+
+            GameManager.Instance.GameWin();
 
         }
     }
