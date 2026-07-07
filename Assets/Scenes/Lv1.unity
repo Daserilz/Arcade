@@ -11309,6 +11309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735763c04262148459386cc132225b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  mechanismScore: 0
+  creativeScore: 0
 --- !u!4 &1490773174
 Transform:
   m_ObjectHideFlags: 0
@@ -16938,6 +16940,22 @@ PrefabInstance:
     - target: {fileID: 3047772643931921509, guid: d8070d8a6f3091d4abcbc108a93e3b09, type: 3}
       propertyPath: m_Name
       value: UIManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270820894149523655, guid: d8070d8a6f3091d4abcbc108a93e3b09, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1490773173}
+    - target: {fileID: 4270820894149523655, guid: d8070d8a6f3091d4abcbc108a93e3b09, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartPlay
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270820894149523655, guid: d8070d8a6f3091d4abcbc108a93e3b09, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4270820894149523655, guid: d8070d8a6f3091d4abcbc108a93e3b09, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5978429170542237635, guid: d8070d8a6f3091d4abcbc108a93e3b09, type: 3}
       propertyPath: m_LocalPosition.x

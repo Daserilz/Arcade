@@ -43,16 +43,25 @@ public class GameManager : MonoBehaviour
         Debug.Log("โหลด Scene ใหม่แล้ว หา UiManager เจอหรือไม่: " + (uiManager != null));
     }
 
-    public void NextLevel()
+    public void NextLevel() // อาจจะมีการย้าย code ในอนาคต
     {
         Time.timeScale = 1f;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    public void GameWin()
+    public void RestartPlay() // อาจจะมีการย้าย code ในอนาคต
+    {
+        Time.timeScale = 1f;
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+        ResetScore();
+    }
+
+    public void GameWin() // อาจจะมีการย้าย code ในอนาคต
     {
         Time.timeScale = 0f;
+        uiManager.ActiveGameEndUI(creativeScore,mechanismScore);
         Debug.Log("Game End");
     }
 
@@ -68,4 +77,9 @@ public class GameManager : MonoBehaviour
         uiManager.UpdateScoreText(creativeScore, mechanismScore);
     }
 
+    public void ResetScore()
+    {
+        mechanismScore = 0;
+        creativeScore = 0;
+    }
 }
