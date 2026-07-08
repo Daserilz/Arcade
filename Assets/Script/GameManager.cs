@@ -4,7 +4,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [Header("Score Settings")]
+    [SerializeField] private int pointsPerFix = 10; // same points for both players
+
+    private int teamScore = 0;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -26,4 +31,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+    // 🔹 Add score only when an object is actually fixed/restored
+    public void AddTeamScore()
+    {
+        teamScore += pointsPerFix;
+        Debug.Log($"<color=cyan>Team Score: {teamScore}</color>");
+    }
+
+    public int GetTeamScore() => teamScore;
 }

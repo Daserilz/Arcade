@@ -15,6 +15,7 @@ public class ObjectGone : MonoBehaviour
 
     private GameObject currentHiddenObject = null;
     private Coroutine sequenceCoroutine;
+    private bool isRespawning = false; // 🔹 NEW: prevents double scoring
 
     public ObjectBug bugManager;
     public Transform player2; // assign Player2 transform here
@@ -53,11 +54,12 @@ public class ObjectGone : MonoBehaviour
     // 🔹 Player2 respawns hidden object
     public void TryRespawnHiddenObject()
     {
-        if (currentHiddenObject != null && player2 != null)
+        if (currentHiddenObject != null && player2 != null && !isRespawning)
         {
             float distance = Vector3.Distance(player2.position, currentHiddenObject.transform.position);
             if (distance <= respawnRange)
             {
+                isRespawning = true; // lock until finished
                 StartCoroutine(RespawnRoutine(currentHiddenObject));
             }
             else
@@ -71,9 +73,17 @@ public class ObjectGone : MonoBehaviour
     {
         yield return new WaitForSeconds(respawnDelay);
 
-        if (obj != null) obj.SetActive(true);
+        if (obj != null)
+        {
+            obj.SetActive(true);
+            Debug.Log("<color=blue>Player2 respawned object!</color>");
+
+            // 🔹 Award team points only once per respawn
+            GameManager.Instance.AddTeamScore();
+        }
 
         currentHiddenObject = null;
+        isRespawning = false; // unlock for next time
     }
 
     // 🔹 Player1 hides nearest object (similar to Player2 respawn)
@@ -102,6 +112,9 @@ public class ObjectGone : MonoBehaviour
             {
                 bugManager.ClearBugs(nearest);
                 Debug.Log("<color=red>Player1 cleared bugs!</color>");
+
+                // 🔹 Award team points when bugs are cleared
+                GameManager.Instance.AddTeamScore();
             }
             else
             {

@@ -42,6 +42,9 @@ public class Player1BugFixer : MonoBehaviour
         {
             bugManager.ClearBugs(nearest);
             Debug.Log("<color=green>Player1 fixed bugs on object!</color>");
+
+            // 🔹 Award team points only when bugs are actually cleared
+            GameManager.Instance.AddTeamScore();
         }
     }
 }

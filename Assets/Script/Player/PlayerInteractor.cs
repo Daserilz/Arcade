@@ -30,6 +30,8 @@ public class PlayerInteractor : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U) && objectGoneManager != null)
         {
             objectGoneManager.TryRespawnHiddenObject();
+   
+
         }
 
         // 🔹 Player1 presses Q
