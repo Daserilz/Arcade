@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour
 
     private int teamScore = 0;
 
+    public int mechanismScore;
+    public int creativeScore;
+
+    private UiManager uiManager;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -23,8 +29,26 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
-    public void NextLevel()
+    // ¡��ԡ�Ѻ Event ����� Object �١�Դ���ͷ���� (��ͧ�ѹ Memory Leak)
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // ���� UiManager �ͧ Scene ����
+        uiManager = FindAnyObjectByType<UiManager>();
+
+        Debug.Log("��Ŵ Scene �������� �� UiManager ���������: " + (uiManager != null));
+    }
+
+    public void NextLevel() // �Ҩ���ա������ code �͹Ҥ�
     {
         Time.timeScale = 1f;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -39,4 +63,37 @@ public class GameManager : MonoBehaviour
     }
 
     public int GetTeamScore() => teamScore;
+
+    public void RestartPlay() // �Ҩ���ա������ code �͹Ҥ�
+    {
+        Time.timeScale = 1f;
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+        ResetScore();
+    }
+
+    public void GameWin() // �Ҩ���ա������ code �͹Ҥ�
+    {
+        Time.timeScale = 0f;
+        uiManager.ActiveGameEndUI(creativeScore,mechanismScore);
+        Debug.Log("Game End");
+    }
+
+    public void addScoreMechanism()
+    {
+        mechanismScore++;
+        uiManager.UpdateScoreText(creativeScore,mechanismScore);
+    }
+
+    public void addScoreCreative()
+    {
+        creativeScore++;
+        uiManager.UpdateScoreText(creativeScore, mechanismScore);
+    }
+
+    public void ResetScore()
+    {
+        mechanismScore = 0;
+        creativeScore = 0;
+    }
 }
