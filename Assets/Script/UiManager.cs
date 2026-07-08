@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using static UnityEngine.Rendering.BoolParameter;
 
+
 public class UiManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -9,15 +10,23 @@ public class UiManager : MonoBehaviour
     public TMP_Text timeText;
     public TMP_Text mechanismScoreText;
     public TMP_Text creativeScoreText;
+    [Header("Game Event Settings")]
+    public TMP_Text eventText;
+    public TMP_Text notiEventactiveText;
+    public GameObject eventUIMenu;
+
+
     [Header("Game End Settings")]
     public GameObject gameEndUI;
     public TMP_Text totalMScoreText;
     public TMP_Text totalCScoreText;
     public TMP_Text flnalScoreText;
+
     void Start()
     {
         UpdateScoreText(GameManager.Instance.creativeScore , GameManager.Instance.mechanismScore);
         gameEndUI.SetActive(false);
+        eventUIMenu.SetActive(false);
     }
 
     public void UpdateTimeText(float time , bool isExit)
@@ -34,10 +43,29 @@ public class UiManager : MonoBehaviour
         }
     }
 
+
+
     public void UpdateScoreText(int creativeScore , int mechanismScore)
     {
         creativeScoreText.text = $"Creative : {creativeScore} ";
         mechanismScoreText.text = $"Mechanism : {mechanismScore} ";
+    }
+
+    public void UpdateEventUI(GameEventType eventType)
+    {
+        ActiveEventUIMenu();
+        eventText.text = $"Current Event : {eventType} ";
+        notiEventactiveText.text = $"The event {eventType} has start.";
+        Invoke("DisActiveEventUIMenu", 2f);
+    }
+    public void ActiveEventUIMenu()
+    {
+        eventUIMenu.SetActive(true);
+    }
+
+    public void DisActiveEventUIMenu()
+    {
+        eventUIMenu.SetActive(false);
     }
 
     public void ActiveGameEndUI(int cScore , int mScore)

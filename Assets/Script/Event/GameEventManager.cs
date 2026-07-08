@@ -16,12 +16,16 @@ public class EventManager : MonoBehaviour
 
     [SerializeField] private CharacterChange formSwitcher;
     [SerializeField] private LaserEventController laserController;
+    [SerializeField] private WorldBorderEventController worldBorderController;
+
+    private UiManager uiManager;
 
     private GameEventType currentEvent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartCoroutine(EventLoopRoutine());
+        uiManager = FindAnyObjectByType<UiManager>();
     }
 
     private IEnumerator EventLoopRoutine()
@@ -51,6 +55,7 @@ public class EventManager : MonoBehaviour
         currentEvent = (GameEventType)randomValue;
 
         Debug.Log($"<color=red>🔥 เกิด Event: {currentEvent}!</color>");
+        uiManager.UpdateEventUI(currentEvent);
 
         // ใช้ Switch Case เพื่อแยกว่าต้องเรียกคำสั่งอะไร ตาม Event ที่สุ่มได้
         switch (currentEvent)
@@ -65,6 +70,7 @@ public class EventManager : MonoBehaviour
 
             case GameEventType.WorldBorder:
                 // TODO: ใส่คำสั่งเปิดใช้งาน Worldborder
+                if (worldBorderController != null) worldBorderController.StartBorderEvent();
                 Debug.Log("Worldborder กำลังบีบเข้ามา!");
                 break;
 
@@ -79,6 +85,7 @@ public class EventManager : MonoBehaviour
     private void StopCurrentEvent()
     {
         Debug.Log($"<color=yellow>จบ Event: {currentEvent} - กลับสู่สภาวะปกติ</color>");
+        uiManager.eventText.text = $"Current Event : None ";
 
         switch (currentEvent)
         {
@@ -89,6 +96,7 @@ public class EventManager : MonoBehaviour
 
             case GameEventType.WorldBorder:
                 // TODO: ใส่คำสั่งปิด Worldborder / ขยายพื้นที่กลับ
+                if (worldBorderController != null) worldBorderController.StopBorderEvent();
                 Debug.Log("Worldborder ขยายกลับเป็นปกติ");
                 break;
 
@@ -97,6 +105,7 @@ public class EventManager : MonoBehaviour
                 if (laserController != null) laserController.StopLaserEvent();
                 Debug.Log("เลเซอร์ถูกปิดลงแล้ว");
                 break;
+
         }
     }
 }
