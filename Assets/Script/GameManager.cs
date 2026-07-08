@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
 
     private UiManager uiManager;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -29,12 +28,12 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    // ¡��ԡ�Ѻ Event ����� Object �١�Դ���ͷ���� (��ͧ�ѹ Memory Leak)
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -42,29 +41,29 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // ���� UiManager �ͧ Scene ����
         uiManager = FindAnyObjectByType<UiManager>();
-
-        Debug.Log("��Ŵ Scene �������� �� UiManager ���������: " + (uiManager != null));
+        Debug.Log("Scene loaded, UiManager found: " + (uiManager != null));
     }
 
-    public void NextLevel() // �Ҩ���ա������ code �͹Ҥ�
+    public void NextLevel()
     {
         Time.timeScale = 1f;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
-    // 🔹 Add score only when an object is actually fixed/restored
     public void AddTeamScore()
     {
         teamScore += pointsPerFix;
         Debug.Log($"<color=cyan>Team Score: {teamScore}</color>");
+
+        if (uiManager != null)
+            uiManager.UpdateScoreText(creativeScore, mechanismScore);
     }
 
     public int GetTeamScore() => teamScore;
 
-    public void RestartPlay() // �Ҩ���ա������ code �͹Ҥ�
+    public void RestartPlay()
     {
         Time.timeScale = 1f;
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -72,28 +71,37 @@ public class GameManager : MonoBehaviour
         ResetScore();
     }
 
-    public void GameWin() // �Ҩ���ա������ code �͹Ҥ�
+    public void GameWin()
     {
         Time.timeScale = 0f;
-        uiManager.ActiveGameEndUI(creativeScore,mechanismScore);
+        uiManager.ActiveGameEndUI(creativeScore, mechanismScore);
         Debug.Log("Game End");
     }
 
-    public void addScoreMechanism()
+    public void AddScoreMechanism()
     {
         mechanismScore++;
-        uiManager.UpdateScoreText(creativeScore,mechanismScore);
+        Debug.Log($"<color=green>Mechanism Score: {mechanismScore}</color>");
+
+        if (uiManager != null)
+            uiManager.UpdateScoreText(creativeScore, mechanismScore);
     }
 
-    public void addScoreCreative()
+    public void AddScoreCreative()
     {
         creativeScore++;
-        uiManager.UpdateScoreText(creativeScore, mechanismScore);
+        Debug.Log($"<color=magenta>Creative Score: {creativeScore}</color>");
+
+        if (uiManager != null)
+            uiManager.UpdateScoreText(creativeScore, mechanismScore);
     }
 
     public void ResetScore()
     {
         mechanismScore = 0;
         creativeScore = 0;
+
+        if (uiManager != null)
+            uiManager.UpdateScoreText(creativeScore, mechanismScore);
     }
 }

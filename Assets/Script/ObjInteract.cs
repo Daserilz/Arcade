@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjInteract : MonoBehaviour , IInteractable
+public class ObjInteract : MonoBehaviour, IInteractable
 {
     [Header("Object Settings")]
     public bool isOneUse;
@@ -18,7 +18,6 @@ public class ObjInteract : MonoBehaviour , IInteractable
         // เช็คว่าสิ่งจับชนมีสคริปต์ PlayerInteractor ไหม
         if (other.CompareTag("Player"))
         {
-            //Debug.Log("In Trigger");
             PlayerInteractor player = other.GetComponent<PlayerInteractor>();
             if (player != null)
             {
@@ -28,12 +27,11 @@ public class ObjInteract : MonoBehaviour , IInteractable
                 {
                     // UI open
 
-                    //  Interact แล้วนะ"
+                    // Interact แล้วนะ
                     player.RegisterInteractable(this);
                 }
             }
         }
-        
     }
 
     protected void OnTriggerExit(Collider other)
@@ -43,7 +41,7 @@ public class ObjInteract : MonoBehaviour , IInteractable
             Debug.Log("Out Trigger");
             PlayerInteractor player = other.GetComponent<PlayerInteractor>();
 
-            if (player != null )
+            if (player != null)
             {
                 // UI close
 
@@ -53,18 +51,17 @@ public class ObjInteract : MonoBehaviour , IInteractable
         }
     }
 
-
     public virtual void Interact(Type playerType)
     {
         Debug.Log($"[Success] Player ({playerType}) interacted with {gameObject.name} (Type: {objectType})!");
-        if (playerType == Type.Mechanism) GameManager.Instance.addScoreMechanism();
-        else if (playerType == Type.Creative) GameManager.Instance.addScoreCreative();
+        if (playerType == Type.Mechanism) GameManager.Instance.AddScoreMechanism();
+        else if (playerType == Type.Creative) GameManager.Instance.AddScoreCreative();
 
         if (isOneUse)
         {
             hasInteracted = true;
         }
 
-        // TODO: ใส่ Logic Object เช่น เปิดประตู, เก็บไอเทม, เปิดกลไก ฯลฯของ 
+        // TODO: ใส่ Logic Object เช่น เปิดประตู, เก็บไอเทม, เปิดกลไก ฯลฯ
     }
 }

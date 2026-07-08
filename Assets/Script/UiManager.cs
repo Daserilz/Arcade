@@ -1,20 +1,18 @@
 using TMPro;
 using UnityEngine;
-using static UnityEngine.Rendering.BoolParameter;
-
 
 public class UiManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Header("In Game Settings")]
     public TMP_Text timeText;
     public TMP_Text mechanismScoreText;
     public TMP_Text creativeScoreText;
+    public TMP_Text teamScoreText; // 🔹 NEW: shows team score
+
     [Header("Game Event Settings")]
     public TMP_Text eventText;
     public TMP_Text notiEventactiveText;
     public GameObject eventUIMenu;
-
 
     [Header("Game End Settings")]
     public GameObject gameEndUI;
@@ -24,40 +22,49 @@ public class UiManager : MonoBehaviour
 
     void Start()
     {
-        UpdateScoreText(GameManager.Instance.creativeScore , GameManager.Instance.mechanismScore);
+        // Initialize UI at start
+        UpdateScoreText(GameManager.Instance.creativeScore, GameManager.Instance.mechanismScore);
+        UpdateTeamScore(GameManager.Instance.GetTeamScore());
+
         gameEndUI.SetActive(false);
         eventUIMenu.SetActive(false);
     }
 
-    public void UpdateTimeText(float time , bool isExit)
+    public void UpdateTimeText(float time, bool isExit)
     {
         int displayTime = Mathf.CeilToInt(time);
 
         if (!isExit)
         {
-            timeText.text = $"Exit is open in {displayTime} seconds ";
+            timeText.text = $"Exit is open in {displayTime} seconds";
         }
         else
         {
-            timeText.text = $"Exit is close in {displayTime} seconds ";
+            timeText.text = $"Exit is close in {displayTime} seconds";
         }
     }
 
-
-
-    public void UpdateScoreText(int creativeScore , int mechanismScore)
+    // 🔹 Called by GameManager whenever scores change
+    public void UpdateScoreText(int creativeScore, int mechanismScore)
     {
-        creativeScoreText.text = $"Creative : {creativeScore} ";
-        mechanismScoreText.text = $"Mechanism : {mechanismScore} ";
+        if (creativeScoreText != null) creativeScoreText.text = $"Creative : {creativeScore}";
+        if (mechanismScoreText != null) mechanismScoreText.text = $"Mechanism : {mechanismScore}";
+        UpdateTeamScore(GameManager.Instance.GetTeamScore());
+    }
+
+    public void UpdateTeamScore(int teamScore)
+    {
+        if (teamScoreText != null) teamScoreText.text = $"Team : {teamScore}";
     }
 
     public void UpdateEventUI(GameEventType eventType)
     {
         ActiveEventUIMenu();
-        eventText.text = $"Current Event : {eventType} ";
-        notiEventactiveText.text = $"The event {eventType} has start.";
+        eventText.text = $"Current Event : {eventType}";
+        notiEventactiveText.text = $"The event {eventType} has started.";
         Invoke("DisActiveEventUIMenu", 2f);
     }
+
     public void ActiveEventUIMenu()
     {
         eventUIMenu.SetActive(true);
@@ -68,13 +75,12 @@ public class UiManager : MonoBehaviour
         eventUIMenu.SetActive(false);
     }
 
-    public void ActiveGameEndUI(int cScore , int mScore)
+    public void ActiveGameEndUI(int cScore, int mScore)
     {
         gameEndUI.SetActive(true);
-        totalMScoreText.text = $"Mechanism Score : {mScore} ";
-        totalCScoreText.text = $"Creative Score : {cScore} ";
+        totalMScoreText.text = $"Mechanism Score : {mScore}";
+        totalCScoreText.text = $"Creative Score : {cScore}";
         int totalScore = cScore + mScore;
-        flnalScoreText.text = $"Total : {totalScore} ";
+        flnalScoreText.text = $"Total : {totalScore}";
     }
-
 }
