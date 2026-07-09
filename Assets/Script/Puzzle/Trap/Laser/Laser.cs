@@ -40,7 +40,7 @@ public class Laser : MonoBehaviour
                 if (laserType == Type.None || target.GetPlayerType() != laserType)
                 {
                     //take damage or reset pos player
-                    Debug.Log("Destroy");
+                    target.TakeDamage(1);
                     respawnSystem.Respawn();
                 }
             }
