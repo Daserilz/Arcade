@@ -32,7 +32,7 @@ public class Laser : MonoBehaviour
             // ถ้าชนวัตถุ (ไม่ว่าจะเป็นกำแพงหรือศัตรู) เลเซอร์จะหยุดวาดแค่จุดที่ชน!
             lineRenderer.SetPosition(1, hit.point);
 
-            PlayerInteractor target = hit.collider.GetComponent<PlayerInteractor>();
+            PlayerSystem target = hit.collider.GetComponent<PlayerSystem>();
             PlayerRespawn respawnSystem = hit.collider.GetComponent<PlayerRespawn>();
 
             if (target != null)

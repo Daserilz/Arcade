@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class PlayerInteractor : MonoBehaviour
+public class PlayerSystem : MonoBehaviour
 {
     [Header("Player Settings")]
     [SerializeField] private Type myPlayerType;
@@ -12,7 +12,10 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private GameObject creativePrefab;
 
     [Header("Respawn Settings")]
+    private PlayerRespawn playerRespawn;
     [SerializeField] private ObjectGone objectGoneManager;
+
+
 
     private ObjInteract currentTarget;
     private Type originalPlayerType;
@@ -22,6 +25,8 @@ public class PlayerInteractor : MonoBehaviour
     private void Start()
     {
         originalPlayerType = myPlayerType;
+        playerRespawn = GetComponent<PlayerRespawn>();
+        playerRespawn.playerRenderer = originalModel.GetComponent<Renderer>();
     }
 
     private void Update()
@@ -82,6 +87,7 @@ public class PlayerInteractor : MonoBehaviour
         {
             tempCharacterInstance = Instantiate(prefabToSpawn, transform.position, transform.rotation);
             tempCharacterInstance.transform.SetParent(this.transform);
+            playerRespawn.playerRenderer = tempCharacterInstance.GetComponent<Renderer>();
         }
 
         Debug.Log($"<color=yellow>Switched to Type: {myPlayerType} temporarily!</color>");
@@ -94,9 +100,12 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (tempCharacterInstance != null) Destroy(tempCharacterInstance);
         if (originalModel != null) originalModel.SetActive(true);
+        playerRespawn.playerRenderer = originalModel.GetComponent<Renderer>();
 
         myPlayerType = originalPlayerType;
         transformCoroutine = null;
+     
         Debug.Log($"<color=orange>Reverted to normal! Type: {myPlayerType}</color>");
     }
+
 }

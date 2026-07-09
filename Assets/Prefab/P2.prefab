@@ -221,6 +221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb73fea4c12347d40be6c9f5f18e5a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
+  invincibilityDuration: 3
+  playerRenderer: {fileID: 183030678923652534}
 --- !u!114 &2238062827603812907
 MonoBehaviour:
   m_ObjectHideFlags: 0
