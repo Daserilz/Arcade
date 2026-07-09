@@ -5,6 +5,8 @@ public class PlayerSystem : MonoBehaviour
 {
     [Header("Player Settings")]
     [SerializeField] private Type myPlayerType;
+    [SerializeField] private int maxHealth = 5;
+    private int currentHealth;
 
     [Header("Transform Settings")]
     [SerializeField] private GameObject originalModel;
@@ -27,6 +29,7 @@ public class PlayerSystem : MonoBehaviour
         originalPlayerType = myPlayerType;
         playerRespawn = GetComponent<PlayerRespawn>();
         playerRespawn.playerRenderer = originalModel.GetComponent<Renderer>();
+        currentHealth = maxHealth;
     }
 
     private void Update()
@@ -62,6 +65,46 @@ public class PlayerSystem : MonoBehaviour
     {
         if (currentTarget == target) currentTarget = null;
     }
+
+    //Damage and HP 
+    public void TakeDamage(int damage)
+    {
+        if (playerRespawn.isInvincible)
+        {
+            return;
+        }
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Heal(int healPoint)
+    {
+        currentHealth += healPoint;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
+    public void InstantDamage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        LevelManager levelManager = FindAnyObjectByType<LevelManager>();
+        levelManager.RemovePlayer();
+    }
+
 
     // ---------------- Swap Character -------------------
     public void SwitchForm(float duration)
