@@ -27,7 +27,7 @@ public class CharacterChange : MonoBehaviour
     public void SwitchAllPlayersForm(float duration)
     {
         // 1. ค้นหาคอมโพเนนต์ PlayerInteractor ทั้งหมดที่เปิดใช้งานอยู่ในฉากปัจจุบัน
-        PlayerInteractor[] allPlayers = Object.FindObjectsByType<PlayerInteractor>(FindObjectsSortMode.None);
+        PlayerSystem[] allPlayers = Object.FindObjectsByType<PlayerSystem>(FindObjectsSortMode.None);
 
         // 2. ตรวจสอบว่ามี Player อยู่ในฉากไหม ถ้าไม่มีให้แจ้งเตือนเพื่อป้องกัน Error
         if (allPlayers.Length == 0)
@@ -37,7 +37,7 @@ public class CharacterChange : MonoBehaviour
         }
 
         // 3. วนลูป (Foreach) เพื่อสั่งให้ Player ทุกๆ ตัวสลับร่างตามเงื่อนไขของตัวเอง
-        foreach (PlayerInteractor player in allPlayers)
+        foreach (PlayerSystem player in allPlayers)
         {
             if (player != null)
             {

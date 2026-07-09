@@ -18,7 +18,7 @@ public class ObjInteract : MonoBehaviour, IInteractable
         // เช็คว่าสิ่งจับชนมีสคริปต์ PlayerInteractor ไหม
         if (other.CompareTag("Player"))
         {
-            PlayerInteractor player = other.GetComponent<PlayerInteractor>();
+            PlayerSystem player = other.GetComponent<PlayerSystem>();
             if (player != null)
             {
                 if (isOneUse && hasInteracted) return;
@@ -39,7 +39,7 @@ public class ObjInteract : MonoBehaviour, IInteractable
         if (other.CompareTag("Player"))
         {
             Debug.Log("Out Trigger");
-            PlayerInteractor player = other.GetComponent<PlayerInteractor>();
+            PlayerSystem player = other.GetComponent<PlayerSystem>();
 
             if (player != null)
             {

@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class PlayerInteractor : MonoBehaviour
+public class PlayerSystem : MonoBehaviour
 {
     [Header("Player Settings")]
     [SerializeField] private Type myPlayerType;
+    [SerializeField] private int maxHealth = 5;
+    private int currentHealth;
 
     [Header("Transform Settings")]
     [SerializeField] private GameObject originalModel;
@@ -12,7 +14,10 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private GameObject creativePrefab;
 
     [Header("Respawn Settings")]
+    private PlayerRespawn playerRespawn;
     [SerializeField] private ObjectGone objectGoneManager;
+
+
 
     private ObjInteract currentTarget;
     private Type originalPlayerType;
@@ -22,6 +27,9 @@ public class PlayerInteractor : MonoBehaviour
     private void Start()
     {
         originalPlayerType = myPlayerType;
+        playerRespawn = GetComponent<PlayerRespawn>();
+        playerRespawn.playerRenderer = originalModel.GetComponent<Renderer>();
+        currentHealth = maxHealth;
     }
 
     private void Update()
@@ -58,6 +66,46 @@ public class PlayerInteractor : MonoBehaviour
         if (currentTarget == target) currentTarget = null;
     }
 
+    //Damage and HP 
+    public void TakeDamage(int damage)
+    {
+        if (playerRespawn.isInvincible)
+        {
+            return;
+        }
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Heal(int healPoint)
+    {
+        currentHealth += healPoint;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
+    public void InstantDamage(int damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        LevelManager levelManager = FindAnyObjectByType<LevelManager>();
+        levelManager.RemovePlayer();
+    }
+
+
     // ---------------- Swap Character -------------------
     public void SwitchForm(float duration)
     {
@@ -82,6 +130,7 @@ public class PlayerInteractor : MonoBehaviour
         {
             tempCharacterInstance = Instantiate(prefabToSpawn, transform.position, transform.rotation);
             tempCharacterInstance.transform.SetParent(this.transform);
+            playerRespawn.playerRenderer = tempCharacterInstance.GetComponent<Renderer>();
         }
 
         Debug.Log($"<color=yellow>Switched to Type: {myPlayerType} temporarily!</color>");
@@ -94,9 +143,12 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (tempCharacterInstance != null) Destroy(tempCharacterInstance);
         if (originalModel != null) originalModel.SetActive(true);
+        playerRespawn.playerRenderer = originalModel.GetComponent<Renderer>();
 
         myPlayerType = originalPlayerType;
         transformCoroutine = null;
+     
         Debug.Log($"<color=orange>Reverted to normal! Type: {myPlayerType}</color>");
     }
+
 }

@@ -78,6 +78,14 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game End");
     }
 
+    public void GameLose()
+    {
+        Time.timeScale = 0f;
+        uiManager.ActiveGameEndUI(creativeScore, mechanismScore);
+        Debug.Log("Game Over");
+    }
+
+
     public void AddScoreMechanism()
     {
         mechanismScore++;

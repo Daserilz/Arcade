@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -10,6 +11,11 @@ public class LevelManager : MonoBehaviour
 
     private bool isExitOpen = false;
     private UiManager uiManager;
+
+
+    [Header("Player Status Settings")]
+    public int playerCount = 2;
+    private int currentPlayerCount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -61,6 +67,15 @@ public class LevelManager : MonoBehaviour
         }
         Debug.Log("Exit close");
         currentTimer = gameTime;
+    }
+
+    public void RemovePlayer()
+    {
+        currentPlayerCount -= 1;
+        if (currentPlayerCount <= 0 )
+        {
+            GameManager.Instance.GameLose();
+        }
     }
 }
 
