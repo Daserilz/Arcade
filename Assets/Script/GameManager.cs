@@ -71,6 +71,13 @@ public class GameManager : MonoBehaviour
         ResetScore();
     }
 
+    public void backToManu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+        ResetScore();
+    }
+
     public void GameWin()
     {
         Time.timeScale = 0f;
@@ -83,6 +90,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         uiManager.ActiveGameEndUI(creativeScore, mechanismScore);
         Debug.Log("Game Over");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
 

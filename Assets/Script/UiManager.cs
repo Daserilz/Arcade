@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UiManager : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class UiManager : MonoBehaviour
     public TMP_Text totalMScoreText;
     public TMP_Text totalCScoreText;
     public TMP_Text flnalScoreText;
+    public Button retryButton;
+    public Button backToMenuButton;
 
     void Start()
     {
@@ -28,6 +31,14 @@ public class UiManager : MonoBehaviour
 
         gameEndUI.SetActive(false);
         eventUIMenu.SetActive(false);
+
+
+        if (retryButton != null & backToMenuButton != null)
+        {
+            retryButton.onClick.AddListener(GameManager.Instance.RestartPlay);
+            backToMenuButton.onClick.AddListener(GameManager.Instance.backToManu);
+        }
+
     }
 
     public void UpdateTimeText(float time, bool isExit)

@@ -187,10 +187,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6879304372851157208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec97a6438e147c04eb4c4f5ab0c93632, type: 3}
+  m_Script: {fileID: 11500000, guid: ff4ed22808a53294e80795ac4f89ba52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
   myPlayerType: 1
+  maxHealth: 5
   originalModel: {fileID: 6748569322660260897}
   mechanismPrefab: {fileID: 3982672091724931973, guid: dcab9351206370a43b3440c993790263, type: 3}
   creativePrefab: {fileID: 6599775053670075092, guid: 3758c4971fe661b4e984a0d7f71ae3b6, type: 3}
@@ -223,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
   invincibilityDuration: 3
   playerRenderer: {fileID: 7283180257177472805}
+  isInvincible: 0
 --- !u!114 &5035166367410287017
 MonoBehaviour:
   m_ObjectHideFlags: 0

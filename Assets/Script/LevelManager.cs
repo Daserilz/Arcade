@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
             exitObject.SetActive(false);
         }
         currentTimer = gameTime;
+        currentPlayerCount = playerCount;
         uiManager = FindAnyObjectByType<UiManager>();
     }
 
