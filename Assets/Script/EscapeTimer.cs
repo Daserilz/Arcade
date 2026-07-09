@@ -6,10 +6,13 @@ public class EscapeTimer : MonoBehaviour
     private float currentTime;
     private bool timerRunning = true;
 
+    private UiManager ui;
+    [SerializeField] WorldBorderMovement border;
+
     void Start()
     {
         currentTime = escapeTime;
-        UiManager ui = FindObjectOfType<UiManager>();
+        ui = FindAnyObjectByType<UiManager>();
         ui.UpdateEscapeTimer(currentTime);
     }
 
@@ -19,7 +22,6 @@ public class EscapeTimer : MonoBehaviour
 
         currentTime -= Time.deltaTime;
 
-        UiManager ui = FindObjectOfType<UiManager>();
         ui.UpdateEscapeTimer(currentTime);
 
 
@@ -28,7 +30,6 @@ public class EscapeTimer : MonoBehaviour
             timerRunning = false;
             currentTime = 0;
 
-            WorldBorderMovement border = FindObjectOfType<WorldBorderMovement>();
             if (border != null)
                 border.ActivateEscapeMode(); // 🔹 full map chase
         }
@@ -38,7 +39,6 @@ public class EscapeTimer : MonoBehaviour
     {
         timerRunning = false;
 
-        UiManager ui = FindObjectOfType<UiManager>();
         if (ui != null)
             ui.HideEscapeTimer();
     }

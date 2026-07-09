@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\player\\playersystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playersystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\player\\playerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playerrespawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\event\\worldborder\\movementworldborder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\event\\worldborder\\movementworldborder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\event\\gameeventmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,16 +27,20 @@
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\player\\playersystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\player\\playersystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\puzzle\\moveobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\puzzle\\moveobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\puzzle\\trap\\laser\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\puzzle\\trap\\laser\\laser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\puzzle\\trap\\basetrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\puzzle\\trap\\basetrap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\event\\worldborder\\movementworldborder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\event\\worldborder\\movementworldborder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\puzzle\\moveobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\puzzle\\moveobj.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\puzzle\\waypointmarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,32 +86,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MoveObj.cs",
-              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\MoveObj.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\MoveObj.cs",
-              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\MoveObj.cs",
-              "RelativeToolTip": "Assets\\Script\\Puzzle\\MoveObj.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T06:45:37.691Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "PlayerSystem.cs",
-              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerSystem.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerSystem.cs",
-              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerSystem.cs",
-              "RelativeToolTip": "Assets\\Script\\Player\\PlayerSystem.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAADwv20AAAAqAAAAAAAAAA==",
+              "Title": "Laser.cs",
+              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Trap\\Laser\\Laser.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\Trap\\Laser\\Laser.cs",
+              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Trap\\Laser\\Laser.cs",
+              "RelativeToolTip": "Assets\\Script\\Puzzle\\Trap\\Laser\\Laser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-09T06:44:10.827Z",
+              "WhenOpened": "2026-07-09T09:31:27.27Z",
               "EditorCaption": ""
             },
             {
@@ -125,26 +116,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MovementWorldBorder.cs",
-              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\WorldBorder\\MovementWorldBorder.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Event\\WorldBorder\\MovementWorldBorder.cs",
-              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\WorldBorder\\MovementWorldBorder.cs",
-              "RelativeToolTip": "Assets\\Script\\Event\\WorldBorder\\MovementWorldBorder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T05:24:55.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "UiManager.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\UiManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\UiManager.cs",
               "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\UiManager.cs",
               "RelativeToolTip": "Assets\\Script\\UiManager.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAkwE0AAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAswCcAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-06T08:43:02.426Z",
               "EditorCaption": ""
@@ -157,7 +135,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\Event\\GameEventManager.cs",
               "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\GameEventManager.cs",
               "RelativeToolTip": "Assets\\Script\\Event\\GameEventManager.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAkwGIAAABbAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwGIAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-02T11:47:55.167Z",
               "EditorCaption": ""
@@ -170,39 +148,77 @@
               "RelativeDocumentMoniker": "Assets\\Script\\LevelManager.cs",
               "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\LevelManager.cs",
               "RelativeToolTip": "Assets\\Script\\LevelManager.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAYwFEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-06T06:24:29.55Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\GameManager.cs",
               "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\GameManager.cs",
               "RelativeToolTip": "Assets\\Script\\GameManager.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAIwFUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-06T05:49:50.757Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "BaseTrap.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Trap\\BaseTrap.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\Trap\\BaseTrap.cs",
               "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Trap\\BaseTrap.cs",
               "RelativeToolTip": "Assets\\Script\\Puzzle\\Trap\\BaseTrap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T06:06:25.21Z"
+              "WhenOpened": "2026-06-22T06:06:25.21Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 1,
+              "Title": "PlayerSystem.cs",
+              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerSystem.cs",
+              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerSystem.cs",
+              "RelativeToolTip": "Assets\\Script\\Player\\PlayerSystem.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAwwGgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:44:10.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MovementWorldBorder.cs",
+              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\WorldBorder\\MovementWorldBorder.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Event\\WorldBorder\\MovementWorldBorder.cs",
+              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\WorldBorder\\MovementWorldBorder.cs",
+              "RelativeToolTip": "Assets\\Script\\Event\\WorldBorder\\MovementWorldBorder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T05:24:55.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MoveObj.cs",
+              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\MoveObj.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\MoveObj.cs",
+              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\MoveObj.cs",
+              "RelativeToolTip": "Assets\\Script\\Puzzle\\MoveObj.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T06:45:37.691Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "LaserEventController.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\LaserEventController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Event\\LaserEventController.cs",
@@ -214,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "WayPointMarker.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\WayPointMarker.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\WayPointMarker.cs",
@@ -226,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Player1BugFixer.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\Player1BugFixer.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\Player1BugFixer.cs",
@@ -238,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Exit.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Exit.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\Exit.cs",
@@ -250,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "LaserMovement.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Trap\\Laser\\LaserMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\Trap\\Laser\\LaserMovement.cs",
@@ -262,7 +278,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ObjInteract.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\ObjInteract.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ObjInteract.cs",
@@ -274,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerMovement.cs",
@@ -286,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "IdenityType.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\IdenityType.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\IdenityType.cs",
@@ -298,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "IInteractable.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\IInteractable.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\IInteractable.cs",

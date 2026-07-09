@@ -4,6 +4,7 @@ using static UnityEngine.GraphicsBuffer;
 public class BaseTrap : MonoBehaviour
 {
     [SerializeField] private Type trapType;
+    public bool isInstantDamage = false;
 
     protected void OnTriggerStay(Collider other)
     {
@@ -18,6 +19,11 @@ public class BaseTrap : MonoBehaviour
                 {
                     //take damage or reset pos player
                     //Debug.Log("Destroy");
+                    if (isInstantDamage) 
+                    {
+                        player.InstantDamage(999);
+                        return;
+                    } 
                     player.TakeDamage(1);
                     respawnSystem.Respawn();
                     //player.gameObject.SetActive(false);

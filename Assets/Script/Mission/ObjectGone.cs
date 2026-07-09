@@ -79,7 +79,8 @@ public class ObjectGone : MonoBehaviour
             Debug.Log("<color=blue>Player2 respawned object!</color>");
 
             // 🔹 Award team points only once per respawn
-            GameManager.Instance.AddTeamScore();
+            //GameManager.Instance.AddTeamScore();
+            GameManager.Instance.AddScoreCreative();
         }
 
         currentHiddenObject = null;
@@ -114,7 +115,9 @@ public class ObjectGone : MonoBehaviour
                 Debug.Log("<color=red>Player1 cleared bugs!</color>");
 
                 // 🔹 Award team points when bugs are cleared
-                GameManager.Instance.AddTeamScore();
+                GameManager.Instance.AddScoreMechanism();
+                //GameManager.Instance.AddTeamScore();
+               
             }
             else
             {

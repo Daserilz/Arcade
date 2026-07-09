@@ -23,6 +23,8 @@ public class WorldBorderEventController : MonoBehaviour
         foreach (GameObject border in borderBlocks)
         {
             if (border != null) border.SetActive(true);
+            WorldBorderMovement worldBorderMove = border.GetComponent<WorldBorderMovement>();
+            worldBorderMove.ActivateEventMode();
         }
     }
 
@@ -31,6 +33,9 @@ public class WorldBorderEventController : MonoBehaviour
         foreach (GameObject border in borderBlocks)
         {
             if (border != null) border.SetActive(false);
+            WorldBorderMovement worldBorderMove = border.GetComponent<WorldBorderMovement>();
+            worldBorderMove.StopBorder();
+            worldBorderMove.ResetBorder();
         }
     }
 

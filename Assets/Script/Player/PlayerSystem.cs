@@ -5,7 +5,7 @@ public class PlayerSystem : MonoBehaviour
 {
     [Header("Player Settings")]
     [SerializeField] private Type myPlayerType;
-    [SerializeField] private int maxHealth = 5;
+    [SerializeField] private int maxHealth = 10;
     private int currentHealth;
 
     [Header("Transform Settings")]
@@ -94,6 +94,7 @@ public class PlayerSystem : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
+            currentHealth = 0;
             Die();
         }
     }
