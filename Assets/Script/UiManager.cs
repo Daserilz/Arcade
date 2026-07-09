@@ -7,7 +7,9 @@ public class UiManager : MonoBehaviour
     public TMP_Text timeText;
     public TMP_Text mechanismScoreText;
     public TMP_Text creativeScoreText;
-    public TMP_Text teamScoreText; // 🔹 NEW: shows team score
+
+    [Header("Escape Timer Settings")]
+    public TMP_Text escapeTimerText; // 🔹 NEW dedicated text for escape timer
 
     [Header("Game Event Settings")]
     public TMP_Text eventText;
@@ -24,7 +26,6 @@ public class UiManager : MonoBehaviour
     {
         // Initialize UI at start
         UpdateScoreText(GameManager.Instance.creativeScore, GameManager.Instance.mechanismScore);
-        UpdateTeamScore(GameManager.Instance.GetTeamScore());
 
         gameEndUI.SetActive(false);
         eventUIMenu.SetActive(false);
@@ -49,12 +50,28 @@ public class UiManager : MonoBehaviour
     {
         if (creativeScoreText != null) creativeScoreText.text = $"Creative : {creativeScore}";
         if (mechanismScoreText != null) mechanismScoreText.text = $"Mechanism : {mechanismScore}";
-        UpdateTeamScore(GameManager.Instance.GetTeamScore());
     }
 
-    public void UpdateTeamScore(int teamScore)
+    // 🔹 Escape Timer UI
+    public void UpdateEscapeTimer(float time)
     {
-        if (teamScoreText != null) teamScoreText.text = $"Team : {teamScore}";
+        if (escapeTimerText == null) return;
+
+        int displayTime = Mathf.CeilToInt(time);
+        if (time > 0)
+        {
+            escapeTimerText.text = $"Timer : {displayTime} seconds";
+        }
+        else
+        {
+            escapeTimerText.text = "Time's up! Escape now!";
+        }
+    }
+
+    public void HideEscapeTimer()
+    {
+        if (escapeTimerText != null)
+            escapeTimerText.gameObject.SetActive(false);
     }
 
     public void UpdateEventUI(GameEventType eventType)

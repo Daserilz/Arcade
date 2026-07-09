@@ -1,38 +1,93 @@
-using UnityEngine;
+๏ปฟusing UnityEngine;
 
 public class WorldBorderMovement : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float speed = 2f;
-    [SerializeField] private float rePosTime = 10f;
-    private float currentTime;
+
+    [Header("Distances")]
+    [SerializeField] private float eventDistance = 50f;   // Distance for event mode
+    [SerializeField] private float fullDistance = 200f;   // Distance for escape mode
+
+    [Header("Direction")]
     [SerializeField] private Vector3 moveDirection = Vector3.forward;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     private Vector3 startPosition;
+    private bool eventMode = false;
+    private bool escapeMode = false;
+
     private void Awake()
     {
-        // บันทึกตำแหน่งเริ่มต้นของกำแพงไว้ตั้งแต่ตอนโหลดฉาก
         startPosition = transform.position;
-        currentTime = rePosTime;
-    }
-
-    private void OnEnable()
-    {
-        // ทุกครั้งที่ Event เริ่มทำงาน (SetActive เป็น true) ให้ดึงบล็อกกลับมาที่จุดเริ่มต้นก่อนเสมอ
-        transform.position = startPosition;
         moveDirection = moveDirection.normalized;
-        currentTime = rePosTime;
+
+        // Make sure the border starts at its original position.
+        transform.position = startPosition;
     }
 
     private void Update()
     {
-        // สั่งให้บล็อกเคลื่อนที่ไปตามทิศทางเรื่อยๆ จนกว่า Event จะถูกปิด
-        transform.Translate(moveDirection * speed * Time.deltaTime);
-        currentTime -= Time.deltaTime;
-        if (currentTime < 0 )
+        if (eventMode)
         {
-            transform.position = startPosition;
-            moveDirection = moveDirection.normalized;
-            currentTime = rePosTime;
+            MoveBorder(eventDistance, true);
         }
+        else if (escapeMode)
+        {
+            MoveBorder(fullDistance, false);
+        }
+    }
+
+    private void MoveBorder(float targetDistance, bool returnToStart)
+    {
+        transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
+
+        float distanceMoved = Vector3.Distance(startPosition, transform.position);
+
+        if (distanceMoved >= targetDistance)
+        {
+            if (returnToStart)
+            {
+                // Event mode: return to start
+                transform.position = startPosition;
+                eventMode = false;
+            }
+            else
+            {
+                // Escape mode: stop at the end
+                transform.position = startPosition + moveDirection * fullDistance;
+                escapeMode = false;
+            }
+        }
+    }
+
+    // Called when a random event starts
+    public void ActivateEventMode()
+    {
+        transform.position = startPosition;
+        eventMode = true;
+        escapeMode = false;
+    }
+
+    // Called when escape timer reaches 0
+    public void ActivateEscapeMode()
+    {
+        transform.position = startPosition;
+        escapeMode = true;
+        eventMode = false;
+    }
+
+    // Optional: stop everything
+    public void StopBorder()
+    {
+        eventMode = false;
+        escapeMode = false;
+    }
+
+    // Optional: reset manually
+    public void ResetBorder()
+    {
+        eventMode = false;
+        escapeMode = false;
+        transform.position = startPosition;
     }
 }
