@@ -8,7 +8,7 @@ public class MoveObj : ObjInteract
     public Transform targetDestination; // goal 
     public float moveSpeed = 5f;
 
-    private bool isMoving = false;
+    //private bool isMoving = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public override void Interact(Type playerType)
@@ -21,7 +21,7 @@ public class MoveObj : ObjInteract
     {
         if (objectToMove == null || targetDestination == null) yield break;
 
-        isMoving = true;
+        //isMoving = true;
         while (Vector3.Distance(objectToMove.transform.position, targetDestination.position) > 0.01f)
         {
             // ค่อยๆ เลื่อนตำแหน่ง
@@ -36,7 +36,7 @@ public class MoveObj : ObjInteract
         }
 
         objectToMove.transform.position = targetDestination.position;
-        isMoving = false;
+        //isMoving = false;
         Debug.Log("move Object to target done");
     }
 }

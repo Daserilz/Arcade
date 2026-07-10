@@ -468,8 +468,6 @@ MonoBehaviour:
   - {fileID: 626760880}
   - {fileID: 1301190387}
   - {fileID: 2118668166}
-  - {fileID: 1011052534}
-  - {fileID: 232158962}
 --- !u!114 &50002525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,11 +1436,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 772880571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &232158962 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5114826527066624029, guid: 59233625f4471da4f9df10ee29ab9f43, type: 3}
-  m_PrefabInstance: {fileID: 1502040566}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &232158963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8229702579433115870, guid: 59233625f4471da4f9df10ee29ab9f43, type: 3}
@@ -7250,6 +7243,7 @@ MonoBehaviour:
   gameTime: 180
   exitTime: 60
   exitObject: {fileID: 892822363}
+  uiManager: {fileID: 0}
   playerCount: 2
 --- !u!4 &810236421
 Transform:
@@ -8308,6 +8302,10 @@ PrefabInstance:
     - target: {fileID: 681793402889703995, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: playerRenderer
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 997685502104060933, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: maxHealth
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 997685502104060933, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: myPlayerType
@@ -9659,11 +9657,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 772880571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1011052534 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5114826527066624029, guid: 59233625f4471da4f9df10ee29ab9f43, type: 3}
-  m_PrefabInstance: {fileID: 1291447507}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1011052535 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8229702579433115870, guid: 59233625f4471da4f9df10ee29ab9f43, type: 3}
@@ -11187,6 +11180,10 @@ PrefabInstance:
     - target: {fileID: 5114826527066624029, guid: 59233625f4471da4f9df10ee29ab9f43, type: 3}
       propertyPath: m_Name
       value: Laser (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114826527066624029, guid: 59233625f4471da4f9df10ee29ab9f43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8154898936919686208, guid: 59233625f4471da4f9df10ee29ab9f43, type: 3}
       propertyPath: moveDirection.x
@@ -13376,6 +13373,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5114826527066624029, guid: 59233625f4471da4f9df10ee29ab9f43, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8154898936919686208, guid: 59233625f4471da4f9df10ee29ab9f43, type: 3}
       propertyPath: moveDirection.x
       value: 1
@@ -14309,6 +14310,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 604686349846805585, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 604686349846805585, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: objectGoneManager
       value: 

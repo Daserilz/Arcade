@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class ObjectGone : MonoBehaviour
 {
     [Header("Target Objects")]
-    public List<GameObject> targetObjects;
+    [SerializeField] private List<GameObject> targetObjects;
 
     [Header("Timing Settings")]
     public float minDelay = 1f;
@@ -17,8 +17,8 @@ public class ObjectGone : MonoBehaviour
     private Coroutine sequenceCoroutine;
     private bool isRespawning = false; // 🔹 NEW: prevents double scoring
 
-    public ObjectBug bugManager;
-    public Transform player2; // assign Player2 transform here
+    [SerializeField] private ObjectBug bugManager;
+    [SerializeField] private Transform player2; // assign Player2 transform here
 
     void Start()
     {

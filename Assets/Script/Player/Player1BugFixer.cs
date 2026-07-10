@@ -25,7 +25,7 @@ public class Player1BugFixer : MonoBehaviour
         GameObject nearest = null;
         float nearestDist = Mathf.Infinity;
 
-        foreach (GameObject obj in bugManager.targetObjects)
+        foreach (GameObject obj in bugManager.GetTargetObjects())
         {
             if (obj == null || !obj.activeSelf) continue;
 

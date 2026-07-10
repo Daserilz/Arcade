@@ -10,7 +10,7 @@ public class PlayerRespawn : MonoBehaviour
 
     [Header("Invincibility Settings")]
     [SerializeField] private float invincibilityDuration = 3f;
-    [SerializeField] public Renderer playerRenderer;
+    [HideInInspector] public Renderer playerRenderer;
 
     [HideInInspector] public bool isInvincible = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created

@@ -55,7 +55,7 @@ public class EventManager : MonoBehaviour
         currentEvent = (GameEventType)randomValue;
 
         Debug.Log($"<color=red>🔥 เกิด Event: {currentEvent}!</color>");
-        uiManager.UpdateEventUI(currentEvent);
+        uiManager.UpdateEventUI(currentEvent,true);
 
         // ใช้ Switch Case เพื่อแยกว่าต้องเรียกคำสั่งอะไร ตาม Event ที่สุ่มได้
         switch (currentEvent)
@@ -85,7 +85,7 @@ public class EventManager : MonoBehaviour
     private void StopCurrentEvent()
     {
         Debug.Log($"<color=yellow>จบ Event: {currentEvent} - กลับสู่สภาวะปกติ</color>");
-        uiManager.eventText.text = $"Current Event : None ";
+        uiManager.UpdateEventUI(currentEvent, false);
 
         switch (currentEvent)
         {

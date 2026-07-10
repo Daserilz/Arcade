@@ -7,16 +7,16 @@ public class LevelManager : MonoBehaviour
     public float exitTime = 60f;
 
     private float currentTimer;
-    public GameObject exitObject;
+    [SerializeField] private GameObject exitObject;
 
     private bool isExitOpen = false;
-    private UiManager uiManager;
+    [SerializeField] private UiManager uiManager;
 
 
     [Header("Player Status Settings")]
     public int playerCount = 2;
     private int currentPlayerCount;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         if (exitObject != null)
@@ -25,14 +25,22 @@ public class LevelManager : MonoBehaviour
         }
         currentTimer = gameTime;
         currentPlayerCount = playerCount;
-        uiManager = FindAnyObjectByType<UiManager>();
+        
+        if (uiManager == null)
+        {
+            uiManager = FindAnyObjectByType<UiManager>();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         currentTimer -= Time.deltaTime;
-        uiManager.UpdateTimeText(currentTimer,isExitOpen);
+        
+        if (uiManager != null)
+        {
+            uiManager.UpdateTimeText(currentTimer, isExitOpen);
+        }
+        
         if (currentTimer < 0)
         {
             if (!isExitOpen)

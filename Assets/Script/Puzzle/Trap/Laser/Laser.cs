@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.MaterialProperty;
+//using static UnityEditor.MaterialProperty;
+
 [RequireComponent(typeof(LineRenderer))]
 public class Laser : MonoBehaviour
 {

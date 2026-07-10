@@ -5,25 +5,25 @@ using UnityEngine.UI;
 public class UiManager : MonoBehaviour
 {
     [Header("In Game Settings")]
-    public TMP_Text timeText;
-    public TMP_Text mechanismScoreText;
-    public TMP_Text creativeScoreText;
+    [SerializeField] private TMP_Text timeText;
+    [SerializeField] private TMP_Text mechanismScoreText;
+    [SerializeField] private TMP_Text creativeScoreText;
 
     [Header("Escape Timer Settings")]
-    public TMP_Text escapeTimerText; // 🔹 NEW dedicated text for escape timer
+    [SerializeField] private TMP_Text escapeTimerText;
 
     [Header("Game Event Settings")]
-    public TMP_Text eventText;
-    public TMP_Text notiEventactiveText;
-    public GameObject eventUIMenu;
+    [SerializeField] private TMP_Text eventText;
+    [SerializeField] private TMP_Text notiEventactiveText;
+    [SerializeField] private GameObject eventUIMenu;
 
     [Header("Game End Settings")]
-    public GameObject gameEndUI;
-    public TMP_Text totalMScoreText;
-    public TMP_Text totalCScoreText;
-    public TMP_Text flnalScoreText;
-    public Button retryButton;
-    public Button backToMenuButton;
+    [SerializeField] private GameObject gameEndUI;
+    [SerializeField] private TMP_Text totalMScoreText;
+    [SerializeField] private TMP_Text totalCScoreText;
+    [SerializeField] private TMP_Text flnalScoreText;
+    [SerializeField] private Button retryButton;
+    [SerializeField] private Button backToMenuButton;
 
     void Start()
     {
@@ -34,7 +34,7 @@ public class UiManager : MonoBehaviour
         eventUIMenu.SetActive(false);
 
 
-        if (retryButton != null & backToMenuButton != null)
+        if (retryButton != null && backToMenuButton != null)
         {
             retryButton.onClick.AddListener(GameManager.Instance.RestartPlay);
             backToMenuButton.onClick.AddListener(GameManager.Instance.backToManu);
@@ -85,12 +85,19 @@ public class UiManager : MonoBehaviour
             escapeTimerText.gameObject.SetActive(false);
     }
 
-    public void UpdateEventUI(GameEventType eventType)
+    public void UpdateEventUI(GameEventType eventType , bool isEventStart)
     {
-        ActiveEventUIMenu();
-        eventText.text = $"Current Event : {eventType}";
-        notiEventactiveText.text = $"The event {eventType} has started.";
-        Invoke("DisActiveEventUIMenu", 2f);
+        if (isEventStart)
+        {
+            ActiveEventUIMenu();
+            eventText.text = $"Current Event : {eventType}";
+            notiEventactiveText.text = $"The event {eventType} has started.";
+            Invoke("DisActiveEventUIMenu", 2f);
+        }
+        else
+        {
+            eventText.text = $"Current Event : None";
+        }
     }
 
     public void ActiveEventUIMenu()

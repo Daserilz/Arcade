@@ -5,14 +5,14 @@ using System.Collections.Generic;
 public class ObjectBug : MonoBehaviour
 {
     [Header("Bug Settings")]
-    public GameObject bugPrefab;
+    [SerializeField] private GameObject bugPrefab;
     public int bugCount = 3;
     public float minSpawnDelay = 1f;
     public float maxSpawnDelay = 5f;
     public float spawnRadius = 2f;
 
     [Header("Target Objects")]
-    public List<GameObject> targetObjects;
+    [SerializeField] private List<GameObject> targetObjects;
 
     private HashSet<GameObject> busyObjects = new HashSet<GameObject>();
     private GameObject currentBuggedObject = null;
@@ -66,6 +66,11 @@ public class ObjectBug : MonoBehaviour
     public bool IsObjectBusy(GameObject obj)
     {
         return busyObjects.Contains(obj);
+    }
+
+    public List<GameObject> GetTargetObjects()
+    {
+        return targetObjects;
     }
 
     // Player1 fixes bugs
