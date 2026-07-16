@@ -11,14 +11,14 @@ public class ObjectGone : MonoBehaviour
     public float minDelay = 1f;
     public float maxDelay = 5f;
     public float respawnDelay = 2f;
-    public float respawnRange = 3f;
+    //public float respawnRange = 3f;
 
     private GameObject currentHiddenObject = null;
     private Coroutine sequenceCoroutine;
     private bool isRespawning = false; // 🔹 NEW: prevents double scoring
 
     [SerializeField] private ObjectBug bugManager;
-    [SerializeField] private Transform player2; // assign Player2 transform here
+    //[SerializeField] private Transform player2; // assign Player2 transform here
 
     void Start()
     {
@@ -52,12 +52,12 @@ public class ObjectGone : MonoBehaviour
     }
 
     // 🔹 Player2 respawns hidden object
-    public void TryRespawnHiddenObject()
+    public void TryRespawnHiddenObject(Vector3 playerPos, float interactRange)
     {
-        if (currentHiddenObject != null && player2 != null && !isRespawning)
+        if (currentHiddenObject != null && !isRespawning)
         {
-            float distance = Vector3.Distance(player2.position, currentHiddenObject.transform.position);
-            if (distance <= respawnRange)
+            float distance = Vector3.Distance(playerPos, currentHiddenObject.transform.position);
+            if (distance <= interactRange)
             {
                 isRespawning = true; // lock until finished
                 StartCoroutine(RespawnRoutine(currentHiddenObject));

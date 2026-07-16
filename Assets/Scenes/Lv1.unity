@@ -952,6 +952,11 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &123960026 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3969457933210661781, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+  m_PrefabInstance: {fileID: 896824260}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &148915702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1085,9 @@ MonoBehaviour:
   isOneUse: 0
   objectType: 1
   targetObject: {fileID: 57067808}
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &165723997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,9 +2523,7 @@ MonoBehaviour:
   minDelay: 1
   maxDelay: 5
   respawnDelay: 1
-  respawnRange: 2
   bugManager: {fileID: 246581036}
-  player2: {fileID: 917033133}
 --- !u!43 &287142903
 Mesh:
   m_ObjectHideFlags: 0
@@ -4485,7 +4491,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player1BugFixer
   bugManager: {fileID: 246581036}
+  objectManager: {fileID: 246581038}
   interactRange: 3
+--- !u!114 &561363871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 604686349846805585, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+  m_PrefabInstance: {fileID: 1547790730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330275741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4ed22808a53294e80795ac4f89ba52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
 --- !u!1 &575184208
 GameObject:
   m_ObjectHideFlags: 0
@@ -6919,6 +6937,9 @@ MonoBehaviour:
   isOneUse: 1
   objectType: 2
   targetObject: {fileID: 1641466140}
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!43 &771692739
 Mesh:
   m_ObjectHideFlags: 0
@@ -8319,6 +8340,54 @@ PrefabInstance:
       propertyPath: objectGoneManager
       value: 
       objectReference: {fileID: 246581038}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 6b36c038-a974-4941-8cee-dec8ff1a809c
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: d0472c1f-290f-4851-9dae-1d9f7fcdb3ed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: 'Player1/Fixing Point[/Keyboard/q]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: 'Player2/Fixing Point[/Keyboard/u]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 917033137}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBugAndObjFixEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3969457933210661781, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: m_Name
       value: P2
@@ -8370,13 +8439,42 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3969457933210661781, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      insertIndex: 6
+      addedObject: {fileID: 917033140}
   m_SourcePrefab: {fileID: 100100000, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
 --- !u!4 &917033133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4281780152008809785, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
   m_PrefabInstance: {fileID: 896824260}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &917033137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 997685502104060933, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+  m_PrefabInstance: {fileID: 896824260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123960026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4ed22808a53294e80795ac4f89ba52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
+--- !u!114 &917033140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123960026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67ab562cd1903448a07a93d2762fa53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player1BugFixer
+  bugManager: {fileID: 246581036}
+  objectManager: {fileID: 246581038}
+  interactRange: 3
 --- !u!43 &952599924
 Mesh:
   m_ObjectHideFlags: 0
@@ -11042,6 +11140,21 @@ MonoBehaviour:
   isOneUse: 1
   objectType: 1
   targetObject: {fileID: 555367279}
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1430993976}
+        m_TargetAssemblyTypeName: WayPointMarker, Assembly-CSharp
+        m_MethodName: ToggleMarker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1212941809
 GameObject:
   m_ObjectHideFlags: 0
@@ -12523,6 +12636,7 @@ MonoBehaviour:
   edgePadding: 30
   hideWhenClose: 1
   minDistance: 5
+  isMarkerActive: 1
 --- !u!1 &1475772264
 GameObject:
   m_ObjectHideFlags: 0
@@ -14302,6 +14416,21 @@ MonoBehaviour:
   isOneUse: 1
   objectType: 2
   targetObject: {fileID: 407268006}
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1979685124}
+        m_TargetAssemblyTypeName: WayPointMarker, Assembly-CSharp
+        m_MethodName: ToggleMarker
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1547790730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14361,6 +14490,54 @@ PrefabInstance:
     - target: {fileID: 3523631349825629576, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 6b36c038-a974-4941-8cee-dec8ff1a809c
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: d0472c1f-290f-4851-9dae-1d9f7fcdb3ed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: 'Player1/Fixing Point[/Keyboard/q]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: 'Player2/Fixing Point[/Keyboard/u]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 561363871}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnBugAndObjFixEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6608911079459301711, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: playerRenderer
@@ -18429,6 +18606,7 @@ MonoBehaviour:
   edgePadding: 30
   hideWhenClose: 1
   minDistance: 5
+  isMarkerActive: 1
 --- !u!1 &1981498539
 GameObject:
   m_ObjectHideFlags: 0

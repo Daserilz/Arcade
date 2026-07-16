@@ -1,25 +1,44 @@
 using UnityEngine;
 
-public class Player1BugFixer : MonoBehaviour
+public class PlayerBugAndObjFixer : MonoBehaviour
 {
     [Header("Bug Manager Reference")]
     [SerializeField] private ObjectBug bugManager; // drag your ObjectBug script here
+    [SerializeField] private ObjectGone objectManager;
 
     [Header("Interaction Settings")]
     [SerializeField] private float interactRange = 3f; // how close Player1 must be
 
     private void Update()
     {
-        // 🔹 Player1 presses Q
-        if (Input.GetKeyDown(KeyCode.Q))
+        //// 🔹 Player1 presses Q
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    TryFixBuggedObject();
+        //}
+    }
+
+
+    public void PreformAction(Type playerType)
+    {
+        switch (playerType)
         {
-            TryFixBuggedObject();
+            case Type.Mechanism:
+                if (!TryFixBuggedObject())
+                {
+                    // 2. ถ้าไม่มีบั๊กให้แก้ ลองซ่อนวัตถุ
+                    objectManager.TryHideNearestObject(transform.position);
+                }
+                break;
+            case Type.Creative:
+                objectManager.TryRespawnHiddenObject(transform.position, interactRange);
+                break;
         }
     }
 
-    private void TryFixBuggedObject()
+    private bool TryFixBuggedObject()
     {
-        if (bugManager == null) return;
+        if (bugManager == null) return false;
 
         // Find nearest target object within range
         GameObject nearest = null;
@@ -45,7 +64,9 @@ public class Player1BugFixer : MonoBehaviour
 
             // 🔹 Award team points only when bugs are actually cleared
             GameManager.Instance.AddScoreMechanism();
+            return true;
             //GameManager.Instance.AddTeamScore();
         }
+        return false;
     }
 }

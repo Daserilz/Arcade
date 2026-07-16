@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerSystem : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private ObjectGone objectGoneManager;
 
 
+    private PlayerBugAndObjFixer bugAndGoneFixer;
 
     private ObjInteract currentTarget;
     private Type originalPlayerType;
@@ -30,26 +32,40 @@ public class PlayerSystem : MonoBehaviour
         playerRespawn = GetComponent<PlayerRespawn>();
         playerRespawn.playerRenderer = originalModel.GetComponent<Renderer>();
         currentHealth = maxHealth;
+        bugAndGoneFixer = GetComponent<PlayerBugAndObjFixer>();
     }
 
     private void Update()
     {
         // 🔹 Player2 presses U
-        if (Input.GetKeyDown(KeyCode.U) && objectGoneManager != null)
-        {
-            objectGoneManager.TryRespawnHiddenObject();
-   
+        //if (Input.GetKeyDown(KeyCode.U) && objectGoneManager != null)
+        //{
+        //    if (bugAndObjFixer != null)
+        //    {
+        //        bugAndObjFixer.PreformAction(myPlayerType);
+        //    }
+        //}
 
-        }
-
-        // 🔹 Player1 presses Q
-        if (Input.GetKeyDown(KeyCode.Q) && objectGoneManager != null)
-        {
-            objectGoneManager.TryHideNearestObject(transform.position);
-        }
+        //// 🔹 Player1 presses Q
+        //if (Input.GetKeyDown(KeyCode.Q) && objectGoneManager != null)
+        //{
+        //    if (bugAndObjFixer != null)
+        //    {
+        //        bugAndObjFixer.PreformAction(myPlayerType);
+        //    }
+        //}
     }
 
     public Type GetPlayerType() => myPlayerType;
+
+
+    public void OnBugAndObjFixEvent(CallbackContext context)
+    {
+        if (context.performed && bugAndGoneFixer != null)
+        {
+            bugAndGoneFixer.PreformAction(myPlayerType);
+        }
+    }
 
     public void OnInteractEvent(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {

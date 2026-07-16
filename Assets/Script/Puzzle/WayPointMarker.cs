@@ -13,6 +13,9 @@ public class WayPointMarker : MonoBehaviour
     public bool hideWhenClose = false; // ซ่อนเมื่ออยู่ใกล้เกินไปหรือไม่?
     public float minDistance = 5f;
 
+    [Header("State")]
+    public bool isMarkerActive = true;
+
     private Camera cam;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +26,12 @@ public class WayPointMarker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!isMarkerActive)
+        {
+            if (markerUI != null && markerUI.enabled) markerUI.enabled = false;
+            return;
+        }
+
         if (target != null && target.gameObject.activeInHierarchy)
         {
             // แปลงพิกัดทางออกจาก 3D เป็นพิกัด 2D บนหน้าจอ
@@ -109,5 +118,12 @@ public class WayPointMarker : MonoBehaviour
         {
             if (markerUI != null) markerUI.enabled = false;
         }
+    }
+
+
+    public void ToggleMarker()
+    {
+        isMarkerActive = !isMarkerActive;
+        if (!isMarkerActive && markerUI != null) markerUI.enabled = false;
     }
 }
