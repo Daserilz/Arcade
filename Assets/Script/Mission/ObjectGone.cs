@@ -11,17 +11,26 @@ public class ObjectGone : MonoBehaviour
     public float minDelay = 1f;
     public float maxDelay = 5f;
     public float respawnDelay = 2f;
-    //public float respawnRange = 3f;
 
-    private GameObject currentHiddenObject = null;
+    private GameObject currentBrokenObject = null;
     private Coroutine sequenceCoroutine;
-    private bool isRespawning = false; // 🔹 NEW: prevents double scoring
+    private bool isRespawning = false;
 
-    [SerializeField] private ObjectBug bugManager;
-    //[SerializeField] private Transform player2; // assign Player2 transform here
+    [SerializeField] private ObjectBug bugManager; // still referenced, but no SetBusy
+
+    private Dictionary<GameObject, Material> originalMaterials = new Dictionary<GameObject, Material>();
+    [SerializeField] private Material brokenMaterial; // glowing red material
 
     void Start()
     {
+        foreach (GameObject obj in targetObjects)
+        {
+            if (obj != null && obj.TryGetComponent<Renderer>(out Renderer rend))
+            {
+                originalMaterials[obj] = rend.material;
+            }
+        }
+
         sequenceCoroutine = StartCoroutine(HideOneObjectAtATime());
     }
 
@@ -29,7 +38,7 @@ public class ObjectGone : MonoBehaviour
     {
         while (true)
         {
-            if (currentHiddenObject != null)
+            if (currentBrokenObject != null)
             {
                 yield return null;
                 continue;
@@ -46,25 +55,42 @@ public class ObjectGone : MonoBehaviour
             float delay = Random.Range(minDelay, maxDelay);
             yield return new WaitForSeconds(delay);
 
-            obj.SetActive(false);
-            currentHiddenObject = obj;
+            MarkAsBroken(obj);
+            currentBrokenObject = obj;
         }
     }
 
-    // 🔹 Player2 respawns hidden object
+    void MarkAsBroken(GameObject obj)
+    {
+        if (obj.TryGetComponent<Renderer>(out Renderer rend))
+        {
+            rend.material = brokenMaterial;
+        }
+        Debug.Log("<color=red>Object marked as broken (signal only)!</color>");
+    }
+
+    void RestoreObject(GameObject obj)
+    {
+        if (obj.TryGetComponent<Renderer>(out Renderer rend) && originalMaterials.ContainsKey(obj))
+        {
+            rend.material = originalMaterials[obj];
+        }
+        Debug.Log("<color=blue>Object restored to normal!</color>");
+    }
+
     public void TryRespawnHiddenObject(Vector3 playerPos, float interactRange)
     {
-        if (currentHiddenObject != null && !isRespawning)
+        if (currentBrokenObject != null && !isRespawning)
         {
-            float distance = Vector3.Distance(playerPos, currentHiddenObject.transform.position);
+            float distance = Vector3.Distance(playerPos, currentBrokenObject.transform.position);
             if (distance <= interactRange)
             {
-                isRespawning = true; // lock until finished
-                StartCoroutine(RespawnRoutine(currentHiddenObject));
+                isRespawning = true;
+                StartCoroutine(RespawnRoutine(currentBrokenObject));
             }
             else
             {
-                Debug.Log("<color=red>Player2 too far to respawn object!</color>");
+                Debug.Log("<color=red>Player2 too far to fix object!</color>");
             }
         }
     }
@@ -75,22 +101,18 @@ public class ObjectGone : MonoBehaviour
 
         if (obj != null)
         {
-            obj.SetActive(true);
-            Debug.Log("<color=blue>Player2 respawned object!</color>");
-
-            // 🔹 Award team points only once per respawn
-            //GameManager.Instance.AddTeamScore();
+            RestoreObject(obj);
             GameManager.Instance.AddScoreCreative();
         }
 
-        currentHiddenObject = null;
-        isRespawning = false; // unlock for next time
+        currentBrokenObject = null;
+        isRespawning = false;
     }
 
-    // 🔹 Player1 hides nearest object (similar to Player2 respawn)
+    // Player1 hides nearest object
     public void TryHideNearestObject(Vector3 playerPos)
     {
-        if (currentHiddenObject != null) return;
+        if (currentBrokenObject != null) return;
 
         GameObject nearest = null;
         float nearestDist = Mathf.Infinity;
@@ -113,17 +135,13 @@ public class ObjectGone : MonoBehaviour
             {
                 bugManager.ClearBugs(nearest);
                 Debug.Log("<color=red>Player1 cleared bugs!</color>");
-
-                // 🔹 Award team points when bugs are cleared
                 GameManager.Instance.AddScoreMechanism();
-                //GameManager.Instance.AddTeamScore();
-               
             }
             else
             {
-                nearest.SetActive(false);
-                currentHiddenObject = nearest;
-                Debug.Log("<color=red>Player1 hid object!</color>");
+                MarkAsBroken(nearest);
+                currentBrokenObject = nearest;
+                Debug.Log("<color=red>Player1 marked object as broken!</color>");
             }
         }
     }

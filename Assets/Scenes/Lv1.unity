@@ -2453,11 +2453,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd21620c4baed8a4a9edef03b85897be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectBug
-  bugPrefab: {fileID: 997489233}
-  bugCount: 5
+  bugPrefab: {fileID: 0}
+  bugCount: 4
   minSpawnDelay: 1
-  maxSpawnDelay: 3
-  spawnRadius: 3
+  maxSpawnDelay: 5
+  spawnRadius: 2
   targetObjects:
   - {fileID: 575184208}
   - {fileID: 1530301577}
@@ -2524,6 +2524,7 @@ MonoBehaviour:
   maxDelay: 5
   respawnDelay: 1
   bugManager: {fileID: 246581036}
+  brokenMaterial: {fileID: 0}
 --- !u!43 &287142903
 Mesh:
   m_ObjectHideFlags: 0
