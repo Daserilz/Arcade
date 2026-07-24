@@ -74,6 +74,11 @@ public class GameManager : MonoBehaviour
     public void backToManu()
     {
         Time.timeScale = 1f;
+      
+        ScoreTransfer.scorePartM = mechanismScore;
+        ScoreTransfer.scorePartC = creativeScore;
+        ScoreTransfer.hasNewScore = true;
+
         SceneManager.LoadScene("MainMenu");
         ResetScore();
     }
@@ -81,14 +86,14 @@ public class GameManager : MonoBehaviour
     public void GameWin()
     {
         Time.timeScale = 0f;
-        uiManager.ActiveGameEndUI(creativeScore, mechanismScore);
+        uiManager.ActiveGameEndUI(creativeScore, mechanismScore , true);
         Debug.Log("Game End");
     }
 
     public void GameLose()
     {
         Time.timeScale = 0f;
-        uiManager.ActiveGameEndUI(creativeScore, mechanismScore);
+        uiManager.ActiveGameEndUI(creativeScore, mechanismScore, false);
         Debug.Log("Game Over");
     }
 
