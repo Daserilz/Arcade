@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UiManager : MonoBehaviour
@@ -19,6 +20,8 @@ public class UiManager : MonoBehaviour
 
     [Header("Game End Settings")]
     [SerializeField] private GameObject gameEndUI;
+    [SerializeField] private GameObject winUI;
+    [SerializeField] private GameObject LoseUI;
     [SerializeField] private TMP_Text totalMScoreText;
     [SerializeField] private TMP_Text totalCScoreText;
     [SerializeField] private TMP_Text flnalScoreText;
@@ -110,12 +113,28 @@ public class UiManager : MonoBehaviour
         eventUIMenu.SetActive(false);
     }
 
-    public void ActiveGameEndUI(int cScore, int mScore)
+    public void ActiveGameEndUI(int cScore, int mScore , bool isWin)
     {
         gameEndUI.SetActive(true);
+        if (isWin)
+        {
+            winUI.SetActive(true);
+            LoseUI.SetActive(false);
+        }
+        else
+        {
+            LoseUI.SetActive(true);
+            winUI.SetActive(false);
+        }
+
         totalMScoreText.text = $"Mechanism Score : {mScore}";
         totalCScoreText.text = $"Creative Score : {cScore}";
         int totalScore = cScore + mScore;
         flnalScoreText.text = $"Total : {totalScore}";
+
+      
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(backToMenuButton.gameObject);
     }
 }
