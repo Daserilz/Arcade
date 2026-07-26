@@ -25,16 +25,44 @@ public class SplitScreenCameraManager : MonoBehaviour
 
     void LateUpdate()
     {
-        if (player1 == null || player2 == null) return;
+        if (player1 != null)
+        {
+            FollowPlayer(camera1, player1);
+        }
+        else
+        {
+            TurnCameraBlack(camera1);
+        }
 
-        // Always follow each player
-        FollowPlayer(camera1, player1);
-        FollowPlayer(camera2, player2);
+        if (player2 != null)
+        {
+            FollowPlayer(camera2, player2);
+        }
+        else
+        {
+            TurnCameraBlack(camera2);
+        }
 
         // Keep only one AudioListener active (choose Player1’s camera)
-        camera1.GetComponent<AudioListener>().enabled = true;
-        camera2.GetComponent<AudioListener>().enabled = false;
+
+        if (camera1 != null && camera2 != null)
+        {
+            camera1.GetComponent<AudioListener>().enabled = true;
+            camera2.GetComponent<AudioListener>().enabled = false;
+        }
     }
+
+
+    void TurnCameraBlack(Camera cam)
+    {
+        if (cam != null)
+        {
+            cam.cullingMask = 0; // สั่งไม่ให้กล้องมองเห็น Layer ใดๆ ในเกมเลย
+            cam.clearFlags = CameraClearFlags.SolidColor; // เปลี่ยนรูปแบบการเคลียร์ภาพเป็นสีทึบ
+            cam.backgroundColor = Color.black; // ตั้งค่าสีพื้นหลังเป็นสีดำ
+        }
+    }
+
 
     void FollowPlayer(Camera cam, Transform player)
     {

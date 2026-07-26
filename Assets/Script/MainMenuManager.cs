@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -44,8 +45,7 @@ public class MainMenuManager : MonoBehaviour
         else
         {
             // อยู่หน้าสุดท้ายแล้ว เปลี่ยน Scene
-            BlockTransition transition = FindAnyObjectByType<BlockTransition>();
-            transition.PlayTransition("Lv1"); // เปลี่ยนเป็นชื่อ Scene ของ Level 1
+            BlockTransition.Instance.LoadScene("Lv1");
             //GameManager.Instance.NextLevel();
         }
     }
@@ -69,6 +69,10 @@ public class MainMenuManager : MonoBehaviour
 
         // ซ่อนปุ่ม Back ถ้าอยู่หน้าแรก (เปิดใช้งานถ้าไม่ได้อยู่หน้าแรก)
         backButton.gameObject.SetActive(currentPage > 0);
-
+        if (currentPage == 0)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(nextButton.gameObject);
+        }
     }
 }
