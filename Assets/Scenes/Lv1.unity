@@ -6751,7 +6751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad013a99744dca42ae3326ce9b105c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  gameTime: 10
+  gameTime: 120
   exitTime: 60
   exitObject: {fileID: 892822363}
   uiManager: {fileID: 0}

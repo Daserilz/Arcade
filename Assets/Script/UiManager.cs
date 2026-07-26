@@ -30,10 +30,18 @@ public class UiManager : MonoBehaviour
     [SerializeField] private Button retryButton;
     [SerializeField] private Button backToMenuButton;
 
+    [Header("Game Transition Settings")]
+    public GameObject darkPanel;
+    public RectTransform mainGamePanel;
+    [HideInInspector] public CanvasGroup gameEndCanvasGroup;
+
     void Start()
     {
         // Initialize UI at start
         UpdateScoreText(GameManager.Instance.creativeScore, GameManager.Instance.mechanismScore);
+
+        darkPanel.SetActive(false);
+        gameEndCanvasGroup = gameEndUI.GetComponent<CanvasGroup>();
 
         gameEndUI.SetActive(false);
         eventUIMenu.SetActive(false);
@@ -168,7 +176,7 @@ public class UiManager : MonoBehaviour
 
     public void ActiveGameEndUI(int cScore, int mScore , bool isWin)
     {
-        gameEndUI.SetActive(true);
+      
         if (isWin)
         {
             winUI.SetActive(true);
@@ -176,6 +184,7 @@ public class UiManager : MonoBehaviour
         }
         else
         {
+            gameEndUI.SetActive(true);
             LoseUI.SetActive(true);
             winUI.SetActive(false);
         }

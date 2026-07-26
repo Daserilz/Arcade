@@ -8,8 +8,11 @@ public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Button playButton;
     [SerializeField] private Button exitButton;
+    private RectTransform mainMenuPanel;
 
     [Header("Tutorial Pages")]
+    public CanvasGroup tutorialCanvasGroup;
+
     public List<GameObject> pages = new List<GameObject>();
     public Button backButton;
     public Button nextButton;
@@ -18,7 +21,8 @@ public class MainMenuManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //playButton.onClick.AddListener(GameManager.Instance.NextLevel);
+        mainMenuPanel = GetComponent<RectTransform>();
+        playButton.onClick.AddListener(ShowTutorial);
         exitButton.onClick.AddListener(GameManager.Instance.QuitGame);
 
         backButton.onClick.AddListener(PreviousPage);
@@ -33,6 +37,10 @@ public class MainMenuManager : MonoBehaviour
         
     }
 
+    public void ShowTutorial()
+    {
+        SceneTransitionUI.Instance.PlayCustomTransition(mainMenuPanel, tutorialCanvasGroup);
+    }
 
     public void NextPage()
     {

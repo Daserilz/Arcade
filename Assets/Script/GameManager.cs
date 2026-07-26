@@ -87,8 +87,12 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         
+        SceneTransitionUI.Instance.PlayCustomTransition(uiManager.mainGamePanel, uiManager.gameEndCanvasGroup, () =>
+        {
+            uiManager.darkPanel.SetActive(true);
+            uiManager.ActiveGameEndUI(creativeScore, mechanismScore, true);
+        });
 
-        uiManager.ActiveGameEndUI(creativeScore, mechanismScore , true);
         Debug.Log("Game End");
     }
 

@@ -3480,7 +3480,7 @@ GameObject:
   - component: {fileID: 849753165}
   - component: {fileID: 849753164}
   m_Layer: 5
-  m_Name: Panel (2)
+  m_Name: Dark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3574,7 +3574,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2018871392}
+  m_Father: {fileID: 893950075}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -3644,6 +3644,7 @@ GameObject:
   - component: {fileID: 893950073}
   - component: {fileID: 893950072}
   - component: {fileID: 893950076}
+  - component: {fileID: 893950077}
   m_Layer: 5
   m_Name: TranstitonCanvas
   m_TagString: Untagged
@@ -3727,6 +3728,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 768824342}
+  - {fileID: 861692669}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3751,6 +3753,21 @@ MonoBehaviour:
   amountOfBlocks: 120
   animDuration: 0.4
   delayBetweenBlocks: 0.01
+--- !u!114 &893950077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893950071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec6c58dfcca4e347aac3b4e456a365c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneTransitionUI
+  defaultOldUIPanel: {fileID: 0}
+  defaultNewUI: {fileID: 0}
+  whiteFlash: {fileID: 861692672}
 --- !u!1 &967604925
 GameObject:
   m_ObjectHideFlags: 0
@@ -4330,34 +4347,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 434731763}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1301247888}
         m_TargetAssemblyTypeName: UnityEngine.CanvasGroup, UnityEngine
         m_MethodName: set_interactable
         m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2018871393}
-        m_TargetAssemblyTypeName: SceneTransitionUI, Assembly-CSharp
-        m_MethodName: PlayTVOffTransition
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4576,6 +4569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuManager
   playButton: {fileID: 1221121974}
   exitButton: {fileID: 668642869}
+  tutorialCanvasGroup: {fileID: 434731766}
   pages:
   - {fileID: 580257353}
   - {fileID: 1760174861}
@@ -5991,7 +5985,6 @@ GameObject:
   - component: {fileID: 2018871391}
   - component: {fileID: 2018871390}
   - component: {fileID: 2018871389}
-  - component: {fileID: 2018871393}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -6078,7 +6071,6 @@ RectTransform:
   - {fileID: 1301247886}
   - {fileID: 1919525965}
   - {fileID: 434731764}
-  - {fileID: 861692669}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6086,21 +6078,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2018871393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018871388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eec6c58dfcca4e347aac3b4e456a365c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneTransitionUI
-  oldUIPanel: {fileID: 1301247886}
-  newUI: {fileID: 434731766}
-  whiteFlash: {fileID: 861692672}
 --- !u!114 &2020321797 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4313494109911002577, guid: dd5ab12b9ecd975458fcb6ae0a12cfb3, type: 3}
