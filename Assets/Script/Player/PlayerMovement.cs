@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     private Vector2 moveInput;
+    public Animator animator;
 
 
     public void OnMoveEvent(InputAction.CallbackContext context)
@@ -40,5 +41,15 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position += move.normalized * speed * Time.deltaTime;
         }
+
+        if (animator != null)
+        {
+            animator.SetFloat("InputX", x);
+            animator.SetFloat("InputY", z);
+        }
+    }
+    public void UpdateAnimator(Animator newAnimator)
+    {
+        animator = newAnimator;
     }
 }
