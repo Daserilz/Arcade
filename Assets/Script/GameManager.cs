@@ -74,27 +74,42 @@ public class GameManager : MonoBehaviour
     public void backToManu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+      
+        ScoreTransfer.scorePartM = mechanismScore;
+        ScoreTransfer.scorePartC = creativeScore;
+        ScoreTransfer.hasNewScore = true;
+
+        BlockTransition.Instance.LoadScene("MainMenu");
         ResetScore();
     }
 
     public void GameWin()
     {
         Time.timeScale = 0f;
-        uiManager.ActiveGameEndUI(creativeScore, mechanismScore);
+        
+        SceneTransitionUI.Instance.PlayCustomTransition(uiManager.mainGamePanel, uiManager.gameEndCanvasGroup, () =>
+        {
+            uiManager.darkPanel.SetActive(true);
+            uiManager.ActiveGameEndUI(creativeScore, mechanismScore, true);
+        });
+
         Debug.Log("Game End");
     }
 
     public void GameLose()
     {
         Time.timeScale = 0f;
-        uiManager.ActiveGameEndUI(creativeScore, mechanismScore);
+        BlockTransition.Instance.PlayTransition(() =>
+        {
+            uiManager.ActiveGameEndUI(creativeScore, mechanismScore, false);
+        });
         Debug.Log("Game Over");
     }
 
     public void QuitGame()
     {
         Application.Quit();
+
     }
 
 
