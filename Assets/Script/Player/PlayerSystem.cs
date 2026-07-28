@@ -20,6 +20,7 @@ public class PlayerSystem : MonoBehaviour
 
 
     private PlayerBugAndObjFixer bugAndGoneFixer;
+    private PlayerMovement playerMovement;
 
     private ObjInteract currentTarget;
     private Type originalPlayerType;
@@ -30,7 +31,8 @@ public class PlayerSystem : MonoBehaviour
     {
         originalPlayerType = myPlayerType;
         playerRespawn = GetComponent<PlayerRespawn>();
-        playerRespawn.playerRenderer = originalModel.GetComponent<Renderer>();
+        playerMovement = GetComponent<PlayerMovement>();
+        playerRespawn.UpdateRenderers(originalModel);
         currentHealth = maxHealth;
         bugAndGoneFixer = GetComponent<PlayerBugAndObjFixer>();
     }
@@ -147,7 +149,8 @@ public class PlayerSystem : MonoBehaviour
         {
             tempCharacterInstance = Instantiate(prefabToSpawn, transform.position, transform.rotation);
             tempCharacterInstance.transform.SetParent(this.transform);
-            playerRespawn.playerRenderer = tempCharacterInstance.GetComponent<Renderer>();
+            playerRespawn.UpdateRenderers(tempCharacterInstance);
+            playerMovement.UpdateAnimator(tempCharacterInstance.GetComponentInChildren<Animator>());
         }
 
         Debug.Log($"<color=yellow>Switched to Type: {myPlayerType} temporarily!</color>");
@@ -160,7 +163,9 @@ public class PlayerSystem : MonoBehaviour
     {
         if (tempCharacterInstance != null) Destroy(tempCharacterInstance);
         if (originalModel != null) originalModel.SetActive(true);
-        playerRespawn.playerRenderer = originalModel.GetComponent<Renderer>();
+        playerRespawn.UpdateRenderers(originalModel);
+
+        playerMovement.UpdateAnimator(originalModel.GetComponentInChildren<Animator>());
 
         myPlayerType = originalPlayerType;
         transformCoroutine = null;

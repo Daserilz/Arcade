@@ -10,7 +10,7 @@ public class PlayerRespawn : MonoBehaviour
 
     [Header("Invincibility Settings")]
     [SerializeField] private float invincibilityDuration = 3f;
-    [HideInInspector] public Renderer playerRenderer;
+    private Renderer[] activeRenderers;
 
     [HideInInspector] public bool isInvincible = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,6 +19,15 @@ public class PlayerRespawn : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody>();
         lastCheckpointPosition = transform.position;
+    }
+
+    public void UpdateRenderers(GameObject targetModel)
+    {
+        if (targetModel != null)
+        {
+            // ดึง Renderer ทั้งหมดจากตัวเองและลูกๆ (Children) ลงใน Array
+            activeRenderers = targetModel.GetComponentsInChildren<Renderer>();
+        }
     }
 
     public void SetNewCheckpoint(Vector3 position)
@@ -52,17 +61,17 @@ public class PlayerRespawn : MonoBehaviour
             // ถ้าเป็นออบเจกต์ธรรมดา ย้ายได้เลย
             transform.position = lastCheckpointPosition;
         }
-        ActivateInvincibility(playerRenderer);
+        ActivateInvincibility();
         Debug.Log("[Respawn]");
     }
 
-    public void ActivateInvincibility(Renderer playerRenderer)
+    public void ActivateInvincibility()
     {
         // สั่งเริ่ม Coroutine
-        StartCoroutine(InvincibilityRoutine(playerRenderer));
+        StartCoroutine(InvincibilityRoutine());
     }
 
-    private IEnumerator InvincibilityRoutine(Renderer playerRenderer)
+    private IEnumerator InvincibilityRoutine()
     {
         // เปิดโหมดอมตะ
         isInvincible = true;
@@ -74,9 +83,15 @@ public class PlayerRespawn : MonoBehaviour
         while (elapsedTime < invincibilityDuration)
         {
             // สลับการแสดงผล (เปิด/ปิด โมเดล) เพื่อทำเอฟเฟกต์กระพริบ
-            if (playerRenderer != null)
+            if (activeRenderers != null)
             {
-                playerRenderer.enabled = !playerRenderer.enabled;
+                foreach (Renderer rend in activeRenderers)
+                {
+                    if (rend != null)
+                    {
+                        rend.enabled = !rend.enabled;
+                    }
+                }
             }
 
             // สั่งให้ Coroutine รอเวลา 0.15 วิ แล้วค่อยกลับมาทำบรรทัดถัดไป 
@@ -88,9 +103,15 @@ public class PlayerRespawn : MonoBehaviour
 
         // เมื่อครบ 3 วินาที
         // 1. บังคับเปิดการแสดงผลให้กลับมาเป็นปกติ (ป้องกันบั๊กลูปจบตอนโมเดลกำลังปิดอยู่)
-        if (playerRenderer != null)
+        if (activeRenderers != null)
         {
-            playerRenderer.enabled = true;
+            foreach (Renderer rend in activeRenderers)
+            {
+                if (rend != null)
+                {
+                    rend.enabled = true;
+                }
+            }
         }
 
         // 2. ปิดโหมดอมตะ
