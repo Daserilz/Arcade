@@ -7092,7 +7092,7 @@ PrefabInstance:
     - target: {fileID: 997685502104060933, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: creativePrefab
       value: 
-      objectReference: {fileID: 6599775053670075092, guid: 3758c4971fe661b4e984a0d7f71ae3b6, type: 3}
+      objectReference: {fileID: 2342248948720743771, guid: 9062083433d012d438d697faf3c4c2de, type: 3}
     - target: {fileID: 997685502104060933, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: objectGoneManager
       value: 
