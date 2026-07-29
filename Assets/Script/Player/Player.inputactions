@@ -381,11 +381,5 @@
             ]
         }
     ],
-    "controlSchemes": [
-        {
-            "name": "Arcade",
-            "bindingGroup": "Arcade",
-            "devices": []
-        }
-    ]
+    "controlSchemes": []
 }
