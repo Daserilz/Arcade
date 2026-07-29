@@ -4095,17 +4095,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff4ed22808a53294e80795ac4f89ba52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
---- !u!114 &561363872 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
-  m_PrefabInstance: {fileID: 1547790730}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330275741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
 --- !u!1 &575184208
 GameObject:
   m_ObjectHideFlags: 0
@@ -6743,7 +6732,6 @@ GameObject:
   - component: {fileID: 810236421}
   - component: {fileID: 810236420}
   - component: {fileID: 810236422}
-  - component: {fileID: 810236423}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -6797,20 +6785,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EscapeTimer
   escapeTime: 300
   border: {fileID: 465870217}
---- !u!114 &810236423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810236419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1afdb4b9212c33e46825379e463b77fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArcadeControllerManager
-  player1Input: {fileID: 561363872}
-  player2Input: {fileID: 917033141}
 --- !u!1 &822827233
 GameObject:
   m_ObjectHideFlags: 0
@@ -7865,7 +7839,7 @@ PrefabInstance:
     - target: {fileID: 997685502104060933, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: creativePrefab
       value: 
-      objectReference: {fileID: 6599775053670075092, guid: 3758c4971fe661b4e984a0d7f71ae3b6, type: 3}
+      objectReference: {fileID: 2342248948720743771, guid: 9062083433d012d438d697faf3c4c2de, type: 3}
     - target: {fileID: 997685502104060933, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: objectGoneManager
       value: 
@@ -8053,17 +8027,6 @@ MonoBehaviour:
   bugManager: {fileID: 246581036}
   objectManager: {fileID: 246581038}
   interactRange: 3
---- !u!114 &917033141 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
-  m_PrefabInstance: {fileID: 896824260}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123960026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
 --- !u!43 &952599924
 Mesh:
   m_ObjectHideFlags: 0
