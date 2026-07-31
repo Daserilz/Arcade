@@ -52,11 +52,17 @@ public class ObjectGone : MonoBehaviour
                 continue;
             }
 
+            // Reserve the object immediately
+            currentBrokenObject = obj;
+
             float delay = Random.Range(minDelay, maxDelay);
             yield return new WaitForSeconds(delay);
 
-            MarkAsBroken(obj);
-            currentBrokenObject = obj;
+            // Double-check it's still valid before breaking
+            if (currentBrokenObject == obj)
+            {
+                MarkAsBroken(obj);
+            }
         }
     }
 
