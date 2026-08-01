@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
@@ -10,27 +11,31 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 moveInput;
 
     [Header("Dash Settings")]
-    public int maxDashes = 3;             // How many dashes allowed
-    public float dashForce = 5f;         // Dash strength
+    public int maxDashes = 3;
+    public float dashForce = 5f;
     public float dashCooldown = 0.5f;
     private int dashesLeft;
     private float lastDashTime;
     private Rigidbody rb;
     private Vector3 lastMoveDir;
 
-
     [Header("Animator")]
     public Animator animator;
+
+    [Header("UI Dash Icons")]
+    public Image[] dashIcons;          // Assign in Inspector
+    public Sprite fullIcon;            // Icon when dash is available
+    public Sprite emptyIcon;           // Icon when dash is used
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         dashesLeft = maxDashes;
+        UpdateDashUI();
     }
 
     public void OnMoveEvent(InputAction.CallbackContext context)
     {
-        // อ่านค่าทิศทางออกมาเป็น Vector2 (X แกนซ้าย-ขวา, Y แกนบน-ล่าง)
         moveInput = context.ReadValue<Vector2>();
     }
 
@@ -46,14 +51,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     void Update()
     {
-       float x = moveInput.x;
-       float z = moveInput.y;
-
-        ////float x = Input.GetAxis("Horizontal"); // WASD
-        ////float z = Input.GetAxis("Vertical");   // WASD
+        float x = moveInput.x;
+        float z = moveInput.y;
 
         Vector3 forward = cameraTransform.forward;
         Vector3 right = cameraTransform.right;
@@ -87,16 +88,28 @@ public class PlayerMovement : MonoBehaviour
             dashDir = transform.forward;
         }
 
-        rb.linearVelocity = lastMoveDir * dashForce; // Snappy dash
+        rb.linearVelocity = lastMoveDir * dashForce;
         dashesLeft--;
         lastDashTime = Time.time;
+        UpdateDashUI();
     }
 
     public void ResetDashes()
     {
         dashesLeft = maxDashes;
+        UpdateDashUI();
     }
 
+    void UpdateDashUI()
+    {
+        for (int i = 0; i < dashIcons.Length; i++)
+        {
+            if (i < dashesLeft)
+                dashIcons[i].sprite = fullIcon;
+            else
+                dashIcons[i].sprite = emptyIcon;
+        }
+    }
 
     public void UpdateAnimator(Animator newAnimator)
     {
