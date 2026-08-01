@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TranspaGreen
+  m_Name: TranspaBlue
   m_Shader: {fileID: -6465566751694194690, guid: 8e969328a79199b4da7c93825ef02116, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -51,10 +51,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EdgeThickness: 0.966
+    - _EdgeThickness: 0.946
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _EdgeColor: {r: 0.52165, g: 4, b: 0.02264118, a: 1}
+    - _EdgeColor: {r: 0, g: 1.1539818, b: 4.1714897, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

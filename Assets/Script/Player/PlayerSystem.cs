@@ -13,6 +13,10 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private GameObject originalModel;
     [SerializeField] private GameObject mechanismPrefab;
     [SerializeField] private GameObject creativePrefab;
+    private LayerMask originalLayerMask;
+   
+    private Type originalPlayerType;
+ 
 
     [Header("Respawn Settings")]
     private PlayerRespawn playerRespawn;
@@ -23,13 +27,15 @@ public class PlayerSystem : MonoBehaviour
     private PlayerMovement playerMovement;
 
     private ObjInteract currentTarget;
-    private Type originalPlayerType;
+
+
     private GameObject tempCharacterInstance;
     private Coroutine transformCoroutine;
 
     private void Start()
     {
         originalPlayerType = myPlayerType;
+        originalLayerMask = gameObject.layer;
         playerRespawn = GetComponent<PlayerRespawn>();
         playerMovement = GetComponent<PlayerMovement>();
         playerRespawn.UpdateRenderers(originalModel);
@@ -60,15 +66,6 @@ public class PlayerSystem : MonoBehaviour
 
     public Type GetPlayerType() => myPlayerType;
 
-
-    public void OnBugAndObjFixEvent(CallbackContext context)
-    {
-        if (context.performed && bugAndGoneFixer != null)
-        {
-            bugAndGoneFixer.PreformAction(myPlayerType);
-        }
-    }
-
     public void OnInteractEvent(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
         if (context.performed && currentTarget != null)
@@ -76,6 +73,7 @@ public class PlayerSystem : MonoBehaviour
             if (currentTarget.isOneUse && currentTarget.hasInteracted) return;
             currentTarget.Interact(myPlayerType);
         }
+        if (context.performed && bugAndGoneFixer != null) bugAndGoneFixer.PreformAction(myPlayerType);
     }
 
     public void RegisterInteractable(ObjInteract target) => currentTarget = target;
@@ -129,8 +127,18 @@ public class PlayerSystem : MonoBehaviour
     public void SwitchForm(float duration)
     {
         Type targetType = Type.None;
-        if (myPlayerType == Type.Creative) targetType = Type.Mechanism;
-        else if (myPlayerType == Type.Mechanism) targetType = Type.Creative;
+        
+        if (myPlayerType == Type.Creative && gameObject.layer == LayerMask.NameToLayer("PlayerCreative"))
+        {
+            targetType = Type.Mechanism;
+            gameObject.layer = LayerMask.NameToLayer("PlayerMechanism");
+        }
+        else if (myPlayerType == Type.Mechanism && gameObject.layer == LayerMask.NameToLayer("PlayerMechanism")) 
+        {
+            targetType = Type.Creative;
+            gameObject.layer = LayerMask.NameToLayer("PlayerCreative");
+        }
+     
         if (targetType == Type.None) return;
 
         if (transformCoroutine != null) StopCoroutine(transformCoroutine);
@@ -164,7 +172,7 @@ public class PlayerSystem : MonoBehaviour
         if (tempCharacterInstance != null) Destroy(tempCharacterInstance);
         if (originalModel != null) originalModel.SetActive(true);
         playerRespawn.UpdateRenderers(originalModel);
-
+        gameObject.layer = originalLayerMask;
         playerMovement.UpdateAnimator(originalModel.GetComponentInChildren<Animator>());
 
         myPlayerType = originalPlayerType;

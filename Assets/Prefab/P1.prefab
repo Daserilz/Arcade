@@ -211,6 +211,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 5
   cameraTransform: {fileID: 0}
+  maxDashes: 3
+  dashForce: 5
+  dashCooldown: 0.5
   animator: {fileID: 1695627706450506756}
 --- !u!114 &6608911079459301711
 MonoBehaviour:
@@ -292,7 +295,19 @@ MonoBehaviour:
     m_ActionId: ba5b10d0-8b8f-4104-8196-2022e1612a27
     m_ActionName: 'Player2/Move[/Keyboard/i,/Keyboard/j,/Keyboard/k,/Keyboard/l]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2324941175909369003}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnDash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6b36c038-a974-4941-8cee-dec8ff1a809c
     m_ActionName: 'Player1/Fixing Point[/Keyboard/q]'
   - m_PersistentCalls:
@@ -318,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 750660265379821582, guid: 67ce50a965289e245a9c18e7f8aaa2d1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000018775459
+      value: 0.0000019371505
       objectReference: {fileID: 0}
     - target: {fileID: 767316235435051965, guid: 67ce50a965289e245a9c18e7f8aaa2d1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -326,7 +341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 767316235435051965, guid: 67ce50a965289e245a9c18e7f8aaa2d1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.002410072
+      value: 0.0024253172
       objectReference: {fileID: 0}
     - target: {fileID: 1274397449142845443, guid: 67ce50a965289e245a9c18e7f8aaa2d1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -346,15 +361,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3519520597195102621, guid: 67ce50a965289e245a9c18e7f8aaa2d1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.02194159
+      value: 0.021941673
       objectReference: {fileID: 0}
     - target: {fileID: 3629422174789882574, guid: 67ce50a965289e245a9c18e7f8aaa2d1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9999557
+      value: 0.9999561
       objectReference: {fileID: 0}
     - target: {fileID: 3629422174789882574, guid: 67ce50a965289e245a9c18e7f8aaa2d1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.009415934
+      value: 0.009376594
       objectReference: {fileID: 0}
     - target: {fileID: 4633165826092572927, guid: 67ce50a965289e245a9c18e7f8aaa2d1, type: 3}
       propertyPath: m_Name
@@ -402,11 +417,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7865075661084486593, guid: 67ce50a965289e245a9c18e7f8aaa2d1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.18586607
+      value: 0.18588974
       objectReference: {fileID: 0}
     - target: {fileID: 7865075661084486593, guid: 67ce50a965289e245a9c18e7f8aaa2d1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.9825751
+      value: -0.9825706
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
