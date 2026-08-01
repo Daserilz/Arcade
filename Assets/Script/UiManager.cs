@@ -57,15 +57,16 @@ public class UiManager : MonoBehaviour
 
     public void UpdateTimeText(float time, bool isExit)
     {
-        int displayTime = Mathf.CeilToInt(time);
+        int minutes = Mathf.FloorToInt(time / 60f);
+        int seconds = Mathf.FloorToInt(time % 60f);
 
         if (!isExit)
         {
-            timeText.text = $"Exit open in {displayTime} seconds";
+            timeText.text = $"Exit open in {minutes}:{seconds} ";
         }
         else
         {
-            timeText.text = $"Exit close in {displayTime} seconds";
+            timeText.text = $"Exit close in  {minutes}:{seconds}";
         }
     }
 
@@ -78,7 +79,7 @@ public class UiManager : MonoBehaviour
             {
                 if (scoreText != null)
                 {
-                    scoreText.text = $"Creative : {creativeScore}";
+                    scoreText.text = $"Designer : {creativeScore}";
                 }
             }
         }
@@ -88,7 +89,7 @@ public class UiManager : MonoBehaviour
             {
                 if (scoreText != null)
                 {
-                    scoreText.text = $"Mechanism : {mechanismScore}";
+                    scoreText.text = $"Devoloper : {mechanismScore}";
                 }
             }
         } 

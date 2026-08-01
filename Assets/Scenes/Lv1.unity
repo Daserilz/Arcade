@@ -7123,8 +7123,16 @@ PrefabInstance:
       value: -2.443
       objectReference: {fileID: 0}
     - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_ActionId
@@ -17741,8 +17749,16 @@ PrefabInstance:
       value: 0.027203772
       objectReference: {fileID: 0}
     - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_ActionId
