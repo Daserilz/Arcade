@@ -31,9 +31,10 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
 
-        if (exitObject != null)
+        if (exitObject != null && emergencyObject !=null)
         {
             exitObject.SetActive(false);
+            emergencyObject.SetActive(false);
         }
 
         currentTimer = gameTime;

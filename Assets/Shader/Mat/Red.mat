@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8258573896234483585
+--- !u!114 &-8517389100216397157
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TranspaGreen
-  m_Shader: {fileID: -6465566751694194690, guid: 8e969328a79199b4da7c93825ef02116, type: 3}
+  m_Name: Red
+  m_Shader: {fileID: -6465566751694194690, guid: fa777c385a8dabf4db19d7bfc6452bb2, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -51,10 +51,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EdgeThickness: 0.966
+    - _EdgeThickness: 1.55
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _EdgeColor: {r: 0.52165, g: 4, b: 0.02264118, a: 1}
+    - _EdgeColor: {r: 5.3403144, g: 0, b: 0.031003153, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
