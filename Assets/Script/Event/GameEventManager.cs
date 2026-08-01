@@ -108,4 +108,10 @@ public class EventManager : MonoBehaviour
 
         }
     }
+
+    public void EsacpeEventActivate()
+    {
+        cooldownDuration = 15f;
+        eventDuration = 30f;
+    }
 }

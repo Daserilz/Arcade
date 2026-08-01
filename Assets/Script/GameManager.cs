@@ -6,9 +6,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [Header("Score Settings")]
-    [SerializeField] private int pointsPerFix = 10; // same points for both players
+    public int pointsPerFix = 1; // same points for both players
 
     private int teamScore = 0;
+    private bool escapeModeActive = false;
 
     public int mechanismScore;
     public int creativeScore;
@@ -99,6 +100,12 @@ public class GameManager : MonoBehaviour
     public void GameLose()
     {
         Time.timeScale = 0f;
+        if (escapeModeActive)
+        {
+            creativeScore = Mathf.CeilToInt(creativeScore / 2f);
+            mechanismScore = Mathf.CeilToInt(mechanismScore / 2f);
+        }
+     
         BlockTransition.Instance.PlayTransition(() =>
         {
             uiManager.ActiveGameEndUI(creativeScore, mechanismScore, false);
@@ -115,7 +122,7 @@ public class GameManager : MonoBehaviour
 
     public void AddScoreMechanism()
     {
-        mechanismScore++;
+        mechanismScore += pointsPerFix;
         Debug.Log($"<color=green>Mechanism Score: {mechanismScore}</color>");
 
         if (uiManager != null)
@@ -124,7 +131,7 @@ public class GameManager : MonoBehaviour
 
     public void AddScoreCreative()
     {
-        creativeScore++;
+        creativeScore += pointsPerFix;
         Debug.Log($"<color=magenta>Creative Score: {creativeScore}</color>");
 
         if (uiManager != null)
@@ -135,8 +142,17 @@ public class GameManager : MonoBehaviour
     {
         mechanismScore = 0;
         creativeScore = 0;
+        pointsPerFix = 1;
+        escapeModeActive = false;
 
         if (uiManager != null)
             uiManager.UpdateScoreText(creativeScore, mechanismScore);
     }
+
+    public void EsacpeSetUp()
+    {
+        pointsPerFix = 2;
+        escapeModeActive = true;
+    }
+
 }
