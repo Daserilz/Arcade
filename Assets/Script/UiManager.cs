@@ -59,14 +59,17 @@ public class UiManager : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(time / 60f);
         int seconds = Mathf.FloorToInt(time % 60f);
+        string timesText = $"{minutes:00}:{seconds:00}";
+
+
 
         if (!isExit)
         {
-            timeText.text = $"Exit open in {minutes}:{seconds} ";
+            timeText.text = $"Exit open in {timesText} ";
         }
         else
         {
-            timeText.text = $"Exit close in  {minutes}:{seconds}";
+            timeText.text = $"Exit close in {timesText}";
         }
     }
 
@@ -79,7 +82,7 @@ public class UiManager : MonoBehaviour
             {
                 if (scoreText != null)
                 {
-                    scoreText.text = $"Designer : {creativeScore}";
+                    scoreText.text = $"Designer Obj Restore : {creativeScore}";
                 }
             }
         }
@@ -89,7 +92,7 @@ public class UiManager : MonoBehaviour
             {
                 if (scoreText != null)
                 {
-                    scoreText.text = $"Devoloper : {mechanismScore}";
+                    scoreText.text = $"Developer Error Fix : {mechanismScore}";
                 }
             }
         } 
@@ -100,14 +103,17 @@ public class UiManager : MonoBehaviour
     {
         if (escapeTimerText == null) return;
 
-        int displayTime = Mathf.CeilToInt(time);
+        int minutes = Mathf.FloorToInt(time / 60f);
+        int seconds = Mathf.FloorToInt(time % 60f);
+        string displayTime = $"{minutes:00}:{seconds:00}";
+
         if (time > 0)
         {
             foreach (var escapeTimer in escapeTimerText)
             {
                 if (escapeTimer != null)
                 {
-                    escapeTimer.text = $"BORDER is coming in {displayTime} seconds";
+                    escapeTimer.text = $"BORDER is coming in {displayTime} ";
                 }
             }
         }
@@ -190,10 +196,10 @@ public class UiManager : MonoBehaviour
             winUI.SetActive(false);
         }
 
-        totalMScoreText.text = $"Mechanism Score : {mScore}";
-        totalCScoreText.text = $"Creative Score : {cScore}";
+        totalMScoreText.text = $"Developer Error Fix  : {mScore}";
+        totalCScoreText.text = $"Designer Obj Restore : {cScore}";
         int totalScore = cScore + mScore;
-        flnalScoreText.text = $"Total : {totalScore}";
+        flnalScoreText.text = $"Score Total : {totalScore}";
 
       
 
