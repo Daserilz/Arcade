@@ -1,31 +1,46 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LevelManager : MonoBehaviour
 {
+    [Header("Level Timer Settings")]
     public float gameTime = 180f;
     public float exitTime = 60f;
-
     private float currentTimer;
-    [SerializeField] private GameObject exitObject;
-
     private bool isExitOpen = false;
+
+    [Header("Escape Timer Settings")]
+    [SerializeField] private float escapeTime = 300f; // 5 minutes = 300 seconds
+    private float escapeCurrentTime;
+    private bool isEscapeTimerRunning = false;
+    [SerializeField] private WorldBorderMovement border;
+
+
+    [Header("Scene References")]
+    [SerializeField] private GameObject exitObject;
+    [SerializeField] private GameObject emergencyObject;
     [SerializeField] private UiManager uiManager;
 
 
     [Header("Player Status Settings")]
     public int playerCount = 2;
     private int currentPlayerCount;
-    
+
+    public UnityEvent esacpeEvent;
     void Start()
     {
-        if (exitObject != null)
+
+        if (exitObject != null && emergencyObject !=null)
         {
             exitObject.SetActive(false);
+            emergencyObject.SetActive(false);
         }
+
         currentTimer = gameTime;
         currentPlayerCount = playerCount;
-        
+        escapeCurrentTime = escapeTime;
+
         if (uiManager == null)
         {
             uiManager = FindAnyObjectByType<UiManager>();
@@ -34,22 +49,45 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        currentTimer -= Time.deltaTime;
-        
-        if (uiManager != null)
+        if (!isEscapeTimerRunning)
         {
-            uiManager.UpdateTimeText(currentTimer, isExitOpen);
-        }
-        
-        if (currentTimer < 0)
-        {
-            if (!isExitOpen)
+            currentTimer -= Time.deltaTime;
+
+            if (uiManager != null)
             {
-                OpenExit();
+                uiManager.UpdateTimeText(currentTimer, isExitOpen);
             }
-            else
+
+            if (currentTimer < 0)
             {
-                CloseExitAndReset();
+                if (!isExitOpen)
+                {
+                    OpenExit();
+                }
+                else
+                {
+                    CloseExitAndReset();
+                }
+            }
+        }
+        else
+        {
+            escapeCurrentTime -= Time.deltaTime;
+
+            if (uiManager != null)
+            {
+                uiManager.UpdateEscapeTimer(escapeCurrentTime);
+            }
+
+            if (escapeCurrentTime <= 0)
+            {
+                isEscapeTimerRunning = false;
+                escapeCurrentTime = 0;
+
+                if (border != null)
+                {
+                    border.ActivateEscapeMode(); // Full map chase
+                }
             }
         }
     }
@@ -75,8 +113,33 @@ public class LevelManager : MonoBehaviour
             exitObject.SetActive(false);
         }
         Debug.Log("Exit close");
-        currentTimer = gameTime;
+
+
+        if (emergencyObject != null) emergencyObject.SetActive(true);
+        StartEscapeTimer();
     }
+
+
+    public void StartEscapeTimer()
+    {
+        isEscapeTimerRunning = true;
+        escapeCurrentTime = escapeTime;
+        GameManager.Instance.pointsPerFix = 2;
+        esacpeEvent.Invoke();
+        Debug.Log("Escape Timer Started!");
+       
+    }
+
+    public void PlayerEscaped()
+    {
+        isEscapeTimerRunning = false;
+
+        if (uiManager != null)
+        {
+            uiManager.HideEscapeTimer();
+        }
+    }
+
 
     public void RemovePlayer()
     {

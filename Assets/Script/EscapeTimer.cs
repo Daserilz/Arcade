@@ -4,7 +4,7 @@ public class EscapeTimer : MonoBehaviour
 {
     [SerializeField] private float escapeTime = 300f; // 5 minutes = 300 seconds
     private float currentTime;
-    private bool timerRunning = true;
+    private bool timerRunning = false;
 
     private UiManager ui;
     [SerializeField] WorldBorderMovement border;
@@ -13,8 +13,15 @@ public class EscapeTimer : MonoBehaviour
     {
         currentTime = escapeTime;
         ui = FindAnyObjectByType<UiManager>();
-        ui.UpdateEscapeTimer(currentTime);
+        //ui.UpdateEscapeTimer(currentTime);
     }
+
+    public void StartEscapeTimer()
+    {
+        timerRunning = true;
+        currentTime = escapeTime;
+    }
+
 
     void Update()
     {
