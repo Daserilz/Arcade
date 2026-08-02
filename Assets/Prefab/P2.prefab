@@ -215,6 +215,9 @@ MonoBehaviour:
   dashForce: 10
   dashCooldown: 0.5
   animator: {fileID: 5481709499962304769}
+  dashIcons: []
+  fullIcon: {fileID: 0}
+  emptyIcon: {fileID: 0}
 --- !u!114 &681793402889703995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,10 +333,6 @@ PrefabInstance:
     - target: {fileID: 2342248948720743771, guid: 9062083433d012d438d697faf3c4c2de, type: 3}
       propertyPath: m_Name
       value: PlayerC
-      objectReference: {fileID: 0}
-    - target: {fileID: 2342248948720743771, guid: 9062083433d012d438d697faf3c4c2de, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3479398870306483512, guid: 9062083433d012d438d697faf3c4c2de, type: 3}
       propertyPath: m_LocalPosition.x
