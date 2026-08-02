@@ -49,7 +49,6 @@ public class WorldBorderMovement : MonoBehaviour
             {
                 // Event mode: return to start
                 transform.position = startPosition;
-                eventMode = false;
             }
             else
             {
