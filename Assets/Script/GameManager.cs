@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
 
     private UiManager uiManager;
 
+    [Header("Sound Settings")]
+    [SerializeField] private AudioClip mScoreSound;
+    [SerializeField] private AudioClip cScoreSound;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -123,6 +127,7 @@ public class GameManager : MonoBehaviour
     public void AddScoreMechanism()
     {
         mechanismScore += pointsPerFix;
+        SoundManager.Instance.PlaySFX(mScoreSound);
         Debug.Log($"<color=green>Mechanism Score: {mechanismScore}</color>");
 
         if (uiManager != null)
@@ -132,6 +137,7 @@ public class GameManager : MonoBehaviour
     public void AddScoreCreative()
     {
         creativeScore += pointsPerFix;
+        SoundManager.Instance.PlaySFX(cScoreSound);
         Debug.Log($"<color=magenta>Creative Score: {creativeScore}</color>");
 
         if (uiManager != null)

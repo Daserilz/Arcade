@@ -12,8 +12,9 @@ public class EventManager : MonoBehaviour
 {
     [SerializeField] private float eventDuration = 30f;
     [SerializeField] private float cooldownDuration = 30f;
+    public AudioClip eventStartSound; // เสียงตอนเริ่ม Event
 
-
+    [Header("Event")]
     [SerializeField] private CharacterChange formSwitcher;
     [SerializeField] private LaserEventController laserController;
     [SerializeField] private WorldBorderEventController worldBorderController;
@@ -55,6 +56,7 @@ public class EventManager : MonoBehaviour
         currentEvent = (GameEventType)randomValue;
 
         Debug.Log($"<color=red>🔥 เกิด Event: {currentEvent}!</color>");
+        SoundManager.Instance.PlaySFXWithFadeOut(eventStartSound, 2f, 0.2f);
         uiManager.UpdateEventUI(currentEvent,true);
 
         // ใช้ Switch Case เพื่อแยกว่าต้องเรียกคำสั่งอะไร ตาม Event ที่สุ่มได้

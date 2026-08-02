@@ -45,6 +45,7 @@ public class ScoreboardManager : MonoBehaviour
     private List<PlayerScore> allScores = new List<PlayerScore>();
     private PlayerScore currentPlayer;
 
+    public AudioClip soundEnter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -73,6 +74,7 @@ public class ScoreboardManager : MonoBehaviour
     {
         if (string.IsNullOrEmpty(nameInputField.text)) return;
 
+        SoundManager.Instance.PlaySFX(soundEnter);
         // ดึงคะแนนจาก ScoreTransfer มาใช้ แทนการระบุตัวเลขตรงๆ
         currentPlayer = new PlayerScore
         {

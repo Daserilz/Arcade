@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
+    [Header("MainMenu")]
     [SerializeField] private Button playButton;
     [SerializeField] private Button exitButton;
     private RectTransform mainMenuPanel;
@@ -18,6 +19,7 @@ public class MainMenuManager : MonoBehaviour
     public Button nextButton;
 
     private int currentPage = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,11 +33,6 @@ public class MainMenuManager : MonoBehaviour
         UpdateUI();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void ShowTutorial()
     {

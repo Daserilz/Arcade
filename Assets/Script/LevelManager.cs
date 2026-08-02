@@ -27,6 +27,11 @@ public class LevelManager : MonoBehaviour
     public int playerCount = 2;
     private int currentPlayerCount;
 
+    [Header("Sound")]
+    public AudioClip exitSound;
+    public AudioClip escapeSound;
+
+
     public UnityEvent esacpeEvent;
     void Start()
     {
@@ -100,6 +105,7 @@ public class LevelManager : MonoBehaviour
             exitObject.SetActive(true);
         }
         Debug.Log("Exit open");
+        SoundManager.Instance.PlaySFXWithFadeOut(exitSound, 3f, 0.2f);
         currentTimer = exitTime;
     }
 
@@ -126,6 +132,7 @@ public class LevelManager : MonoBehaviour
         escapeCurrentTime = escapeTime;
         GameManager.Instance.pointsPerFix = 2;
         esacpeEvent.Invoke();
+        SoundManager.Instance.PlaySFXWithFadeOut(escapeSound, 3f, 0.2f);
         Debug.Log("Escape Timer Started!");
        
     }
