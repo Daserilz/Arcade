@@ -16,13 +16,16 @@ public class ObjectGone : MonoBehaviour
     private Coroutine sequenceCoroutine;
     private bool isRespawning = false;
 
-    [SerializeField] private ObjectBug bugManager; // still referenced, but no SetBusy
+    [System.NonSerialized] private ObjectBug bugManager;
 
     private Dictionary<GameObject, Material> originalMaterials = new Dictionary<GameObject, Material>();
     [SerializeField] private Material brokenMaterial; // glowing red material
 
     void Start()
     {
+        // Find bugManager at runtime instead of serializing it
+        bugManager = FindAnyObjectByType<ObjectBug>();
+        
         foreach (GameObject obj in targetObjects)
         {
             if (obj != null && obj.TryGetComponent<Renderer>(out Renderer rend))

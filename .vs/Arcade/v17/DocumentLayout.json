@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\Daser\\Github\\Arcade\\Arcade\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\mission\\objectgone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mission\\objectgone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\mission\\objectbug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mission\\objectbug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\arcadecontrollermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\arcadecontrollermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|d:\\daser\\github\\arcade\\arcade\\assets\\script\\camera\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\camera\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\event\\characterchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\event\\characterchange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\sound\\scenebgm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,10 +75,6 @@
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\score\\scoretransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\mission\\objectgone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mission\\objectgone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\transitionandvisualeffect\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\transitionandvisualeffect\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -81,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\puzzle\\waypointmarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\puzzle\\waypointmarker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\mission\\objectbug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\mission\\objectbug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{461C21C9-1C9C-B8A3-1CAA-6008983DC1B4}|Assembly-CSharp.csproj|D:\\Daser\\Github\\Arcade\\Arcade\\assets\\script\\puzzle\\button\\closeopenbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -134,47 +138,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "ArcadeControllerManager.cs",
+              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\ArcadeControllerManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\ArcadeControllerManager.cs",
+              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\ArcadeControllerManager.cs",
+              "RelativeToolTip": "Assets\\Script\\ArcadeControllerManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-03T10:20:00.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "LevelManager.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\LevelManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\LevelManager.cs",
               "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\LevelManager.cs",
               "RelativeToolTip": "Assets\\Script\\LevelManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAJYAAAAAAAAAAAA7wBAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T06:24:29.55Z"
+              "WhenOpened": "2026-07-06T06:24:29.55Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CharacterChange.cs",
-              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\CharacterChange.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Event\\CharacterChange.cs",
-              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\CharacterChange.cs",
-              "RelativeToolTip": "Assets\\Script\\Event\\CharacterChange.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T17:44:59.52Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BlockTransition.cs",
-              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\TransitionAndVisualEffect\\BlockTransition.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\TransitionAndVisualEffect\\BlockTransition.cs",
-              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\TransitionAndVisualEffect\\BlockTransition.cs",
-              "RelativeToolTip": "Assets\\Script\\TransitionAndVisualEffect\\BlockTransition.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwHAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-25T19:01:30.53Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "SceneBGM.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Sound\\SceneBGM.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Sound\\SceneBGM.cs",
@@ -186,7 +180,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "ObjectBug.cs",
+              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Mission\\ObjectBug.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Mission\\ObjectBug.cs",
+              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Mission\\ObjectBug.cs",
+              "RelativeToolTip": "Assets\\Script\\Mission\\ObjectBug.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T05:49:33.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ObjectGone.cs",
+              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Mission\\ObjectGone.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Mission\\ObjectGone.cs",
+              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Mission\\ObjectGone.cs",
+              "RelativeToolTip": "Assets\\Script\\Mission\\ObjectGone.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-24T10:51:05.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BlockTransition.cs",
+              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\TransitionAndVisualEffect\\BlockTransition.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\TransitionAndVisualEffect\\BlockTransition.cs",
+              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\TransitionAndVisualEffect\\BlockTransition.cs",
+              "RelativeToolTip": "Assets\\Script\\TransitionAndVisualEffect\\BlockTransition.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAgwHAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-25T19:01:30.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CharacterChange.cs",
+              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\CharacterChange.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Event\\CharacterChange.cs",
+              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\CharacterChange.cs",
+              "RelativeToolTip": "Assets\\Script\\Event\\CharacterChange.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T17:44:59.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "PanelManager.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\PanelManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PanelManager.cs",
@@ -198,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Camera.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Camera\\Camera.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Camera\\Camera.cs",
@@ -211,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "MainMenuManager.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\MainMenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\MainMenuManager.cs",
@@ -223,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "SoundManager.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Sound\\SoundManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Sound\\SoundManager.cs",
@@ -235,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "UIButtonSound.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Sound\\UIButtonSound.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Sound\\UIButtonSound.cs",
@@ -247,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "EscapeTimer.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\EscapeTimer.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\EscapeTimer.cs",
@@ -259,7 +303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "PlayerSystem.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerSystem.cs",
@@ -271,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "SceneTransitionUI.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\TransitionAndVisualEffect\\SceneTransitionUI.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TransitionAndVisualEffect\\SceneTransitionUI.cs",
@@ -283,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "CameraFollowPlayer2.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Camera\\CameraFollowPlayer2.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Camera\\CameraFollowPlayer2.cs",
@@ -295,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "CameraFollowPlayer1.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Camera\\CameraFollowPlayer1.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Camera\\CameraFollowPlayer1.cs",
@@ -307,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "ScoreTransfer.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Score\\ScoreTransfer.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Score\\ScoreTransfer.cs",
@@ -319,19 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ObjectGone.cs",
-              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Mission\\ObjectGone.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Mission\\ObjectGone.cs",
-              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Mission\\ObjectGone.cs",
-              "RelativeToolTip": "Assets\\Script\\Mission\\ObjectGone.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwA8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-24T10:51:05.016Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Wave.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\TransitionAndVisualEffect\\Wave.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TransitionAndVisualEffect\\Wave.cs",
@@ -343,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "MoveObj.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\MoveObj.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\MoveObj.cs",
@@ -355,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "PlayerBugAndObjFixer.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Player\\PlayerBugAndObjFixer.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Player\\PlayerBugAndObjFixer.cs",
@@ -367,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "WayPointMarker.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\WayPointMarker.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\WayPointMarker.cs",
@@ -379,19 +411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ObjectBug.cs",
-              "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Mission\\ObjectBug.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Mission\\ObjectBug.cs",
-              "ToolTip": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Mission\\ObjectBug.cs",
-              "RelativeToolTip": "Assets\\Script\\Mission\\ObjectBug.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAnwD0AAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-10T05:49:33.83Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "CloseOpenButton.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Button\\CloseOpenButton.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\Button\\CloseOpenButton.cs",
@@ -403,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "README_SERIALIZATION_FIXES.md",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\README_SERIALIZATION_FIXES.md",
               "RelativeDocumentMoniker": "Assets\\Script\\README_SERIALIZATION_FIXES.md",
@@ -415,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "FIXES_APPLIED_SUMMARY.md",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\FIXES_APPLIED_SUMMARY.md",
               "RelativeDocumentMoniker": "Assets\\Script\\FIXES_APPLIED_SUMMARY.md",
@@ -427,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "ObjInteract.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\ObjInteract.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\ObjInteract.cs",
@@ -439,7 +459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "BaseTrap.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Trap\\BaseTrap.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\Trap\\BaseTrap.cs",
@@ -451,7 +471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "LaserEventController.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Event\\LaserEventController.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Event\\LaserEventController.cs",
@@ -463,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Exit.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Exit.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\Exit.cs",
@@ -475,7 +495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "LaserMovement.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\Puzzle\\Trap\\Laser\\LaserMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Puzzle\\Trap\\Laser\\LaserMovement.cs",
@@ -487,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "IdenityType.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\IdenityType.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\IdenityType.cs",
@@ -499,7 +519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "IInteractable.cs",
               "DocumentMoniker": "D:\\Daser\\Github\\Arcade\\Arcade\\Assets\\Script\\IInteractable.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\IInteractable.cs",

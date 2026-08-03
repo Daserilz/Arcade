@@ -14,7 +14,7 @@ public class ObjectBug : MonoBehaviour
     [Header("Target Objects")]
     [SerializeField] private List<GameObject> targetObjects;
 
-    private HashSet<GameObject> busyObjects = new HashSet<GameObject>();
+    private List<GameObject> busyObjects = new List<GameObject>();
     private GameObject currentBuggedObject = null;
     private List<GameObject> spawnedBugs = new List<GameObject>();
 

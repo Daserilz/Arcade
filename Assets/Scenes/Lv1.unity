@@ -7085,7 +7085,6 @@ MonoBehaviour:
   minDelay: 2
   maxDelay: 3
   respawnDelay: 1
-  bugManager: {fileID: 246581036}
   brokenMaterial: {fileID: 2100000, guid: c13c3816acfae14459fea1079a65c29c, type: 2}
 --- !u!1 &249802120
 GameObject:

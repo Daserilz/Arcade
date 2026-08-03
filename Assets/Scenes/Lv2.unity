@@ -525,6 +525,9 @@ MonoBehaviour:
   isOneUse: 1
   objectType: 1
   targetObject: {fileID: 928661431}
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &19773238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1370,6 +1373,9 @@ MonoBehaviour:
   isOneUse: 1
   objectType: 2
   targetObject: {fileID: 1736162826}
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &249799635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1547,10 +1553,18 @@ MonoBehaviour:
   player1: {fileID: 985471350}
   player2: {fileID: 1934842097}
   smoothSpeed: 5
-  minZoom: 45
-  maxZoom: 80
+  minFOV: 40
+  maxFOV: 60
   zoomLimiter: 100
   offset: {x: 0, y: 5, z: -10}
+  useBounds: 1
+  minX: -10
+  maxX: 10
+  minZ: -10
+  maxZ: 10
+  enableProximityFOV: 1
+  proximityThreshold: 8
+  closeToCameraFOV: 75
 --- !u!114 &278146777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4021,10 +4035,18 @@ MonoBehaviour:
   player1: {fileID: 985471350}
   player2: {fileID: 1934842097}
   smoothSpeed: 5
-  minZoom: 45
-  maxZoom: 80
+  minFOV: 40
+  maxFOV: 60
   zoomLimiter: 100
   offset: {x: 0, y: 5, z: -10}
+  useBounds: 1
+  minX: -10
+  maxX: 10
+  minZ: -10
+  maxZ: 10
+  enableProximityFOV: 1
+  proximityThreshold: 8
+  closeToCameraFOV: 75
 --- !u!114 &1290042443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4558,6 +4580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseTrap
   trapType: 1
+  isInstantDamage: 0
 --- !u!65 &1510880527
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4907,6 +4930,9 @@ MonoBehaviour:
   isOneUse: 0
   objectType: 1
   targetObject: {fileID: 615271519}
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1730077470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5249,6 +5275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseTrap
   trapType: 2
+  isInstantDamage: 0
 --- !u!65 &1787313033
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6076,6 +6103,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 735763c04262148459386cc132225b8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  pointsPerFix: 1
+  mechanismScore: 0
+  creativeScore: 0
+  mScoreSound: {fileID: 0}
+  cScoreSound: {fileID: 0}
 --- !u!114 &2087708837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6119,8 +6151,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EventManager
   eventDuration: 10
   cooldownDuration: 5
+  eventStartSound: {fileID: 0}
   formSwitcher: {fileID: 2087708837}
   laserController: {fileID: 2087708840}
+  worldBorderController: {fileID: 0}
 --- !u!114 &2087708840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6412,10 +6446,26 @@ PrefabInstance:
       propertyPath: mechanismPrefab
       value: 
       objectReference: {fileID: 3982672091724931973, guid: dcab9351206370a43b3440c993790263, type: 3}
+    - target: {fileID: 619556495757748716, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.02194227
+      objectReference: {fileID: 0}
+    - target: {fileID: 725235882668843711, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.009416739
+      objectReference: {fileID: 0}
     - target: {fileID: 2324941175909369003, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 278146774}
+    - target: {fileID: 3017785266636320882, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9993008
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017785266636320882, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.03739039
+      objectReference: {fileID: 0}
     - target: {fileID: 3523631349825629576, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.3
@@ -6455,6 +6505,22 @@ PrefabInstance:
     - target: {fileID: 3523631349825629576, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3613051853323356287, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000002562999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3668406199749852108, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0024092663
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362220270249278417, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9996299
+      objectReference: {fileID: 0}
+    - target: {fileID: 4362220270249278417, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.027203558
       objectReference: {fileID: 0}
     - target: {fileID: 6879304372851157208, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: m_Name
