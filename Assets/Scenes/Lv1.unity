@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.26833028, g: 0.37287888, b: 0.6377357, a: 1}
+  m_SkyboxMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -699,7 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9182c113cb881bf4c8ccb329818f645a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EventManager
-  eventDuration: 60
+  eventDuration: 45
   cooldownDuration: 30
   eventStartSound: {fileID: 8300000, guid: 7be155bb281f21d4eaa243e110d8b699, type: 3}
   formSwitcher: {fileID: 50002525}
@@ -15196,8 +15196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad013a99744dca42ae3326ce9b105c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  gameTime: 1
-  exitTime: 1
+  gameTime: 180
+  exitTime: 60
   escapeTime: 180
   border: {fileID: 476816073}
   exitObject: {fileID: 892822363}
@@ -15893,7 +15893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: 
+      value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 2238062827603812907, guid: 532d97c80c2c5f149bc5740370c1293d, type: 3}
       propertyPath: m_ActionEvents.Array.size
@@ -28810,7 +28810,7 @@ MonoBehaviour:
   useBounds: 1
   minX: -18
   maxX: 18
-  minZ: -20
+  minZ: -16
   maxZ: 16
   enableProximityFOV: 1
   proximityThreshold: 20
@@ -31533,7 +31533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: 
+      value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 5035166367410287017, guid: ef47e173b44a7e24fbc91decbc2f059a, type: 3}
       propertyPath: m_ActionEvents.Array.size
